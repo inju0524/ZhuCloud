@@ -1,59 +1,291 @@
-<!--IconValuesStart-->
-{
-    "music":"audiotrack",
-    "video":"movie",
-    "img":"image",
-    "pdf":"picture_as_pdf",
-    "ttf":"font_download",
-    "ttc":"font_download",
-    "font":"font_download",
-    "woff":"font_download",
-    "woff2":"font_download",
-    "gif":"gif",
-    "exe":"desktop_windows",
-    "default":"insert_drive_file",
-    "dll":"extension"
-}
-<!--IconValuesEnd-->
 <!DOCTYPE html>
-<html lang="<!--constStr@language-->">
+<html lang="zh-cn">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
-	<title><!--Title--></title>
-	<link rel="icon" href="<!--base_path-->favicon.ico" type="image/x-icon">
-	<link rel="shortcut icon" href="<!--base_path-->favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="https://cdn.staticfile.org/mdui/0.4.1/css/mdui.css" />
-	<style>
-        body{background-color:#f2f5fa;padding-bottom:60px;<!--BackgroundStart-->background-position:center bottom;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-image:url("<!--BackgroundUrl-->");<!--BackgroundEnd-->}
-        .nexmoe-item{margin:20px -8px 0!important;padding:15px!important;border-radius:5px;
-            background: rgba(255, 255, 255, 0.45);backdrop-filter: blur(15px);-webkit-backdrop-filter: blur(15px);-webkit-box-shadow:0 .5em 3em rgba(161,177,204,.4);box-shadow:0 .5em 3em rgba(161,177,204,.4);}
-        .mdui-img-fluid,.mdui-video-fluid{border-radius:5px;border:1px solid #eee}
-        .mdui-list{padding:0}
-        .mdui-list-item{
-            margin:0!important;
-            border-radius:5px;
-            padding:0 10px 0 5px!important;
-            margin-bottom:10px!important;
-            background: rgba(255, 255, 255, 0.25);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><!--Title--></title>
+
+    <!--MdRequireStart-->
+    <link rel="stylesheet" href="https://unpkg.com/github-markdown-css@3.0.1/github-markdown.css">
+    <script type="text/javascript" src="?jsFile=marked.js"></script>
+    <!--MdRequireEnd-->
+
+    <link rel="shortcut icon" href="<!--base_path-->favicon.ico" type="image/x-icon">
+    <!--https://p.sfx.ms/images/favicon.ico-->
+    <style>
+        /* 通用样式 */
+        /* 用于消除默认自带样式 */
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+            overflow: hidden;
         }
-        .mdui-list-item:last-child{margin-bottom:0!important}
-        .mdui-list-item:first-child{border:none}
-        .mdui-toolbar{width:auto;margin-top:60px!important}
-        .mdui-appbar .mdui-toolbar{height:56px;font-size:16px}
-        .mdui-toolbar>*{padding:0 6px;margin:0 2px;}
-        .mdui-toolbar>.mdui-typo-headline{padding:0 16px 0 0}
-        .mdui-toolbar>i{padding:0}
-        .mdui-toolbar>a{padding:0 16px;line-height:30px;border-radius:30px;border:1px solid #eee;opacity:.87;background: rgba(255, 255, 255, 0.5);}
-        .mdui-toolbar>a:hover,a.mdui-typo-headline,a.active{opacity:1}
-        .mdui-container{max-width:980px}
-        .mdui-list>.th{background-color:initial}
-        .mdui-list-item>a{width:100%;line-height:48px}
-        .mdui-toolbar>a:last-child{opacity:1;background-color:#1e89f2;color:#ffff}
-        .more-disk{display: inline-block;max-width: 100px;}
+        a { 
+            text-decoration: none;
+            font-weight: 400;
+            color: rgb(97, 97, 97);
+            transition: 0.5s;
+        }
+        a:hover {
+            font-weight: 600;
+            color: rgb(36, 36, 36);
+        }
+        ul { 
+            list-style: none;
+        }
+        input[type="radio"] {
+            margin: 0;
+            outline: none;
+        }
+
+        /* 兼容样式 */
+        body {
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        select:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+        }
+
+        /* 自定义样式 */
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1100px;
+        }
+        .pull-left { 
+            float: left; 
+            padding: 0px 20px;
+            background: rgba(255,255,255,0.2);
+        }
+        .pull-right { 
+            float: right; 
+        }
+
+        /* 字体外部引用 */
+        @font-face {
+            font-family: 'iconfont';  /* project id 1634400 */
+            src: url('//at.alicdn.com/t/font_1634400_9yg8f5s278.eot');
+            src: url('//at.alicdn.com/t/font_1634400_9yg8f5s278.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_1634400_9yg8f5s278.woff2') format('woff2'),
+            url('//at.alicdn.com/t/font_1634400_9yg8f5s278.woff') format('woff'),
+            url('//at.alicdn.com/t/font_1634400_9yg8f5s278.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_1634400_9yg8f5s278.svg#iconfont') format('svg');
+        }
+        .iconfont {
+            font-family:"iconfont" !important;
+            font-size:16px;font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* header */
+        header {
+            width: 100%;
+            /*height: 88px;*/
+            line-height: 48px;
+            font-size: 16px;
+            background-color: #0078D4;
+        }
+        header nav {
+            height: 48px;
+            color: #FFF;
+            box-sizing: border-box;
+        }
+        header nav a {
+            color: #FFF;
+            font-weight: 600;
+            transition: 0.5s;
+        }
+        header nav a:hover {
+            color: #FFF;
+        }
+        header nav .lang .language { outline: none; }
+        header .control {
+            height: 40px;
+            line-height: 40px;
+            background-color: #f4f4f4;
+        }
+        header .control .control-item {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        /* main */
+        main { 
+            position: relative;
+            height: 100%;
+            background: #f0f0f4;
+        }
+        main .scroll {
+            overflow-y: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: calc(100dvh - 48px);
+        }
+        main .main-item-list {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            background: white;
+            margin: 20px;
+            line-height: 32px;
+            font-size: 14px;
+            box-sizing: border-box;
+            border-radius: 12px;
+            border: #e0e0e0 solid 1px;
+            padding: 12px 0;
+        }
+        main .main-title h1 {
+            margin: 0;
+            padding: 32px 32px 10px 32px;
+            font-size: 19px;
+            font-weight: 600;
+        }
+        div.main-title > h1 > a:last-of-type {
+            font-weight: 600;
+            color: rgb(36, 36, 36);
+        }
+
+
+        main .main-items:hover { 
+            background-color: #F4F4F4;
+            transform: scale(0.980);
+            border-radius: 10px;
+            border-bottom: 0px solid #F4F4F4;
+        }
+        main .main-items:hover .main-items-radio { 
+            display: inline-block!important; 
+        }
+        main .main-item-list .inner-container {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #FFF;
+            box-sizing: border-box;
+
+        }
+        main .main-item-list .inner-container > div {
+            padding-left: 12px;
+            padding-right: 8px;
+            box-sizing: border-box;
+            text-wrap: nowrap;
+            font-weight: 600;
+        }
+        div.main-items.main-item-title > div > div.main-items-icon {
+            display: none;
+        }
+        main .main-item-list .main-item-title { 
+            border-bottom: 1px solid #EAEAEA;
+        }
+        main .main-item-list .main-items-radio-box {
+            width: 48px;
+            height: 32px;
+            line-height: 40px;
+            text-align: center;
+        }
+        main .main-item-list .main-items-radio-box .main-items-radio {
+            display: none;
+            width: 18px;
+            height: 18px;
+        }
+        main .main-item-list .main-items-radio-box .main-items-radio[currstatus=true] {
+            display: block;
+        }
+        main .main-item-list .main-items-icon {
+            min-width: 38px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+        }
+        main .main-item-title .main-items-icon {
+            height: 32px!important;
+            line-height: 9px!important;
+        }
+        main .main-item-title .main-items-icon:hover,
+        main .main-item-list .main-items-displayName:hover,
+        main .main-item-list .main-items-dateModified:hover,
+        main .main-item-list .main-items-size:hover { 
+            background-color: #EAEAEA; 
+        }
+        main .main-item-list .main-items-icon .iconfont {
+            font-size: 20px;
+        }
+        main .main-item-list .main-items-icon img {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+        }
+        main .main-items {
+            display: flex;
+            justify-content: flex-start;
+            border-bottom: 1px solid #F4F4F4;
+            box-sizing: border-box;
+            padding: 0 20px;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+        main .main-item-list .main-items-displayName,
+        main .main-item-list .main-items-fileName { 
+            width: 520px;
+        }
+        main .main-item-list .main-items-dateModified,
+        main .main-item-list .main-items-dateTime { 
+            width: 250px; 
+        }
+        main .main-item-list .main-items-size,
+        main .main-item-list .main-items-fileSize { 
+            width: 180px;
+        }
+        main .main-item-list .main-items-radio-box,
+        main .main-item-list .main-items-icon,
+        main .main-item-list .main-items-fileName,
+        main .main-item-list .main-items-dateTime,
+        main .main-item-list .main-items-fileSize {
+            padding: 11px 8px 11px 12px;
+            height: 42px;
+            line-height: 22px;
+            font-family: "Microsoft Yahei UI", Verdana, Simsun, "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
+            white-space: nowrap;
+            /* text-overflow: ellipsis; */
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        main .main-item-list .main-items-radio-box,
+        main .main-item-list .main-items-icon {
+            overflow: initial;
+        }
+
+        main .main-item-list .main-items-fileName a {
+            color: inherit;
+        }
+        main .main-item-list .main-items-fileName a:hover {
+            text-decoration: underline;
+        }
+        .more-disk{
+            vertical-align: middle;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            max-width: 100px;
+        }
         .more-disk div{
             list-style:none;
-            position:absolute;display:none;background:#ffffff;border-radius:5px;margin:0 0 0 -10px;color:#205D67;z-index:1;
+            position:absolute;
+            display:none;background:#ffffff;border-radius:5px;margin:0 0 0 -10px;/*padding:0 7px;*/color:#205D67;z-index:1;
             box-shadow: 0 0.5em 3em rgba(161,177,204,.4);
         }
         .more-disk:hover div{display:block}
@@ -61,638 +293,413 @@
         .more-disk div li a{text-decoration: none; color:rgba(0,0,0,.3);}
         .more-disk div li a:hover{color:rgba(0,0,0,.87);}
         .more-disk div li a[now]{color:rgba(0,0,0,1);}
-        @media screen and (max-width:980px){
-            .mdui-list-item .mdui-text-right{display:none}
-            .mdui-container{width:100%!important;margin:0}
-            /*.mdui-toolbar>*{display:none}*/
-            .mdui-toolbar>a:last-child,.mdui-toolbar>.mdui-typo-headline,.mdui-toolbar>i:first-child{display:block}
-        }
-        .mdui-typo.mdui-shadow-3.markdown{
-            padding: 20px;
-            margin: 20px -8px;
-            border-radius:5px;
-            background: rgba(255, 255, 255, 0.45);
-            backdrop-filter: blur(15px);-webkit-backdrop-filter: blur(15px);
-            color: #fff;
-            text-shadow: #000 1px 1px 3px;
-        }
-        .mdui-typo.mdui-shadow-3.markdown svg{
-            filter: drop-shadow(1px 1px 2px rgba(0,0,0,.75));
-            padding-right: 1px;
-        }
-        .mdui-theme-accent-blue .mdui-typo a{
-            display: inline!important;
-            color: #64ffda;
-        }
-        .mdui-theme-accent-blue .mdui-color-theme-accent{
-            background: rgba(255, 255, 255, 0.45)!important;
-            backdrop-filter: blur(15px)!important;
-        }
-        .mdui-theme-accent-blue .mdui-color-theme-accent i{
-            color: #fff;
-            text-shadow: #000 1px 1px 3px;
-        }
-        /* 下载按钮美化 */
+
         #download{
-            padding: 0px;
-            display: block;
-            width: 120px;
-            height: 59px;
-            text-align: center;
-            align-items: center;
-            margin: 20px auto;
-            color: #fff !important;
-            background-color: #448aff !important;
-            border-radius: 120px;
-            -webkit-box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
-            box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
-            transition: all 0.5s;
-            text-decoration: none;
-            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px 10px 20px;
         }
-        #download i{
-            height: 59px;
-            line-height: 59px;
+
+        #download_bu{
+            display: flex;
+            justify-content: flex-end;
         }
-        #download:hover{
-            box-shadow: #616161 0 3px 10px;
-	        transform:translate(calc(0px), calc(0px - 5px)); /* 上浮效果 */
-            transition: all 0.5s;
+
+        #download_bu button{
+            width: auto;
+            font-size: 15px;
+            margin-left: 20px;
+            border-radius: 8px;
+            border: 2px solid #0078d4;
+            padding: 6px 20px 6px 20px;
+            transition: 0.5s;
         }
-        #video{
-            height: 520px;
-            width: 100%;
-        }
+
+        #download_1{background: white;color: #0078d4;}
+        #download_2{background: #0078d4; color: white;}
+        #download_1:hover{background: rgb(233, 233, 233);}
+        #download_2:hover{background: #006cbe;}
+
+        textarea#url{
+            padding: 10px;
+            resize: none;
+            border: 1px solid #c8c6c4;
+            border-bottom: 2px solid #3b3a39;
+            border-radius: 8px;
+            outline: none;
+            overflow: hidden;
+            transition: 0.5s;
+            font-family: "Microsoft Yahei UI", Verdana, Simsun, "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
+        }textarea#url:hover{border-bottom: 2px solid #0078d4;}
     </style>
-    <style>
-		/*自定义 字体*/
-            @font-face {
-                font-family: "DIY font";
-                src: url("https://npm.elemecdn.com/velor2012_handsome_asset@9.0.2-1.1/HarmonyOS_Sans_SC_Medium.subset.woff2") format("truetype");
-            }
-            html,body{
-                font-family: "DIY font";
-            }
-            /* 美化滚动条 */
-            ::-webkit-scrollbar {/*滚动条整体样式*/
-                    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
-                    height: 4px;
-                    scrollbar-arrow-color:red;
-            }
-            ::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
-                    border-radius: 5px;
-                    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-                    background: rgba(0,0,0,0.2);
-                    scrollbar-arrow-color:red;
-            }
-            ::-webkit-scrollbar-track {/*滚动条里面轨道*/
-                    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-                    border-radius: 0;
-                    background: rgba(0,0,0,0.1);
-}
-	</style>
-    <!--customCss-->
-	<script src="https://cdn.staticfile.org/mdui/0.4.1/js/mdui.min.js"></script>
-	
-<style>
-/*渐变背景CSS */
-#canvas-basic {
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -999;
-}
-</style>
-
-
-<!-- body -->
-
-<!-- 渐变背景初始化 -->
-<canvas id="canvas-basic"></canvas> 
-<script src="https://npm.elemecdn.com/granim@2.0.0/dist/granim.min.js"></script>
-<script>
-var granimInstance = new Granim({
-    element: '#canvas-basic',
-    direction: 'left-right',
-    isPausedWhenNotInView: true,
-    states : {
-        "default-state": {
-            gradients: [
-                ['#a18cd1', '#fbc2eb'],
-                 ['#fff1eb', '#ace0f9'],
-                 ['#d4fc79', '#96e6a1'],
-                 ['#a1c4fd', '#c2e9fb'],
-                 ['#a8edea', '#fed6e3'],
-                 ['#9890e3', '#b1f4cf'],
-                 ['#a1c4fd', '#c2e9fb'],
-                 ['#fff1eb', '#ace0f9']
-           
-            ]
-        }
-    }
-});
-</script>
 </head>
-	
-<body class="mdui-theme-primary-blue-grey mdui-theme-accent-blue">
-	
-	<div class="mdui-container">
-	    <div class="mdui-container-fluid">
-            <div class="mdui-toolbar nexmoe-item" id="toolbar">
+<body>
+    <header>
+        <nav class="container">
+            <div class="title pull-left">
                 <a href="<!--base_path-->"><!--Sitename--></a>
-<!--MultiDiskAreaStart-->
-                <i class="mdui-icon material-icons mdui-icon-dark" style="margin:0;">chevron_right</i>
-                <div class="more-disk">
-                    <span><!--DiskNameNow--></span>
-                    <div>
-<!--MultiDisksStart-->
-                        <li><a href="<!--MultiDisksUrl-->" <!--MultiDisksNow-->><!--MultiDisksName--></a></li>
-<!--MultiDisksEnd-->
-                    </div>
+            </div>
+            <div class="pull-right"><!--
+<!--LoginStart-->
+                <a class="pull-left" onclick="/*login();*/"><!--constStr@Login--></a>
+<!--LoginEnd-->
+<!--AdminStart-->
+                <a class="pull-left" onclick="logout();"><!--constStr@Logout--></a>
+<!--AdminEnd-->
+                &nbsp;| -->
+                <div class="pull-right lang">
+                    <a class="pull-left" href="?login=admin">登录</a>
                 </div>
-<!--MultiDiskAreaEnd-->
-<!--PathArrayStart-->
-                <i class="mdui-icon material-icons mdui-icon-dark" style="margin:0;">chevron_right</i>
-                <a href="<!--PathArrayLink-->"><!--PathArrayName--></a>
-<!--PathArrayEnd-->
+            </div>
+        </nav>
+<!--AdminStart-->
+        <div class="control">
+            <div class="container">
+                <div class="control-item">
+                    <button class="control-items">
+                        <i class="iconfont control-items-icon">&#xe755;</i>
+                        <span class="control-items-content"><!--constStr@Create--></span>
+                    </button>
+                </div>
             </div>
         </div>
-
-<!--ListStart-->
-        <div class="mdui-container-fluid">
-<!--EncryptedStart-->
-            <div class="mdui-col-md-6 mdui-col-offset-md-3">
-              <!--<center><h1 class="mdui-typo-display-2-opacity">这是一个受保护的文件夹，您需要提供访问密码才能查看。</h1></center>-->
-              <form action="" method="post">
-                  <div class="mdui-textfield mdui-textfield-floating-label">
-                    <i class="mdui-icon material-icons">https</i>
-                    <label class="mdui-textfield-label"><!--constStr@InputPassword--></label>
-                    <input name="password1" class="mdui-textfield-input" type="password"/>
-                  </div>
-                  <br>
-                  <button type="submit" class="mdui-center mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme">
-                      <i class="mdui-icon material-icons">fingerprint</i>
-                      <!--constStr@Submit-->
-                  </button>
-              </form>
-            </div>
-<!--EncryptedEnd-->
-<!--GuestUploadStart-->
-<!--
-            <div class="nexmoe-item" style="padding: 100px!important;">
-                <div class="mdui-typo-display-3-opacity" style="text-align:center;">OneImages</div>
-                <form action="" method="post" enctype="multipart/form-data">
-                    <input class="mdui-center" type="file" style="margin: 50px 0;" name="file" />
-                    <div class="mdui-row-xs-3">
-                        <div class="mdui-col"></div>
-                        <div class="mdui-col">
-                            <button class="mdui-btn mdui-btn-block mdui-color-theme-accent mdui-ripple"><!--constStr@Upload--></button>
+<!--AdminEnd-->
+    </header>
+    <main>
+        <!--ListStart-->
+        <div class="scroll">
+            <div class="container">
+                <div class="main-title">
+                    <h1 class="main-title-path">
+                        <a href="<!--base_path-->"><!--constStr@Home--></a>
+<!--DiskPathArrayStart-->
+                        >
+                        <a href="<!--PathArrayLink-->"><!--PathArrayName--></a>
+<!--DiskPathArrayEnd-->
+                    </h1>
+                </div>
+<!--HeadmdStart-->
+            <div class="main-item-list" id="head-div">
+                <div class="list-container" style="padding: 20px;">
+                    <div class="list-header-container">
+                        <div class="readme">
+                            <div class="markdown-body" id="head">
+                                <textarea id="head-md" style="display:none;"><!--HeadmdContent--></textarea>
+                            </div>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
--->
-<!--GuestUploadEnd-->
-<!--HeadomfStart-->
-<div class="mdui-typo mdui-shadow-3" style="padding: 20px;margin: 20px 0">
-<!--HeadomfContent-->
-</div>
-<!--HeadomfEnd-->
-<!--HeadmdStart-->
-<div class="mdui-typo mdui-shadow-3 markdown">
-<!--HeadmdContent-->
-</div>
 <!--HeadmdEnd-->
+
 <!--IsFileStart-->
 <!--IsimgFileStart-->
-            <div class="nexmoe-item">
-                <img class="mdui-img-fluid mdui-center" src="<!--FileDownUrl-->"/>
+            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                图片预览
             </div>
-            <!--  图片灯箱 -->
-            <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
-            <script type="text/javascript" src="https://jsd.cdn.zzko.cn/gh/xiaoyanu/file-test@2022.3.3/more/dengxiang.js"></script>
-            <script type="text/javascript">
-            jQuery(function($){$("img[src$=jpg],img[src$=gif],img[src$=png],img[src$=jpeg],img[src$=bmp]").addClass("spotlight").each(function(){this.onclick=function(){return hs.expand(this)}});})
-            </script>
+            <div class="main-item-list" id="imgFil-div" style="padding: 0;overflow: hidden;">
+                <img src="<!--FileDownUrl-->" alt="<!--FileName-->" onload="if (this.offsetWidth>document.getElementById('url').offsetWidth) this.style.width='100%';" />
+            </div>
 <!--IsimgFileEnd-->
-<!--IstxtFileStart-->
-            <div class="nexmoe-item">
-                <pre id="editor" style="white-space: pre-wrap;"><!--TxtContent--></pre>
-            </div>
-<!--IstxtFileEnd-->
-<!--IsmusicFileStart-->
-            <div class="nexmoe-item">
-                <audio class="mdui-center" src="<!--FileDownUrl-->" controls autoplay style="width: 100%;" ></audio>
-            </div>
-<!--IsmusicFileEnd-->
-<!--IsofficeFileStart-->
-            <div class="nexmoe-item">
-                <iframe id="office-a" src="https://view.officeapps.live.com/op/view.aspx?src=<!--FileEncodeDownUrl-->" style="width: 100%;height: 800px" frameborder="0"></iframe>
-            </div>
-<!--IsofficeFileEnd-->
 <!--IsvideoFileStart-->
-            <script src="https://cdn.staticfile.org/hls.js/1.4.8/hls.min.js"></script>
-            <script src="https://cdn.staticfile.org/flv.js/1.6.2/flv.min.js"></script>
-            <script src="https://cdn.staticfile.org/dashjs/4.7.1/dash.all.min.js"></script>
-            <script src="https://cdn.staticfile.org/artplayer/5.0.9/artplayer.js"></script>
-            <script src="https://cdn.staticfile.org/crypto-js/4.1.1/crypto-js.min.js"></script>
-            <script src="https://npm.elemecdn.com/artplayer-plugin-danmuku@5.0.1/dist/artplayer-plugin-danmuku.js"></script>
-            <div class="nexmoe-item">
-                <div class="mdui-center" id="video"></div>
+            <div class="main-item-list" id="videoFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                视频预览
             </div>
-            <script>
-                function playM3u8(video, url, art) {
-                    if (Hls.isSupported()) {
-                        if (art.hls) art.hls.destroy();
-                        const hls = new Hls();
-                        hls.loadSource(url);
-                        hls.attachMedia(video);
-                        art.hls = hls;
-                        art.on('destroy', () => hls.destroy());
-                    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                        video.src = url;
-                    } else {
-                        art.notice.show = 'Unsupported playback format: m3u8';
-                    }
-                }
-        
-                function playFlv(video, url, art) {
-                    if (flvjs.isSupported()) {
-                        if (art.flv) art.flv.destroy();
-                        const flv = flvjs.createPlayer({
-                            type: 'flv',
-                            url
-                        });
-                        flv.attachMediaElement(video);
-                        flv.load();
-                        art.flv = flv;
-                        art.on('destroy', () => flv.destroy());
-                    } else {
-                        art.notice.show = 'Unsupported playback format: flv';
-                    }
-                }
-        
-                function playMpd(video, url, art) {
-                    if (dashjs.supportsMediaSource()) {
-                        if (art.dash) art.dash.destroy();
-                        const dash = dashjs.MediaPlayer().create();
-                        dash.initialize(video, url, art.option.autoplay);
-                        art.dash = dash;
-                        art.on('destroy', () => dash.destroy());
-                    } else {
-                        art.notice.show = 'Unsupported playback format: mpd';
-                    }
-                }
-            </script>
-            <script>
-                // 获取当前网址
-                var currentURL = decodeURIComponent(window.location.href);
-                // 去掉查询参数，只保留?左边的内容
-                var urlWithoutQuery = currentURL.split('?')[0];
-                // 定义生成MD5哈希值的函数
-                function getmd5(str) {
-                // 将字符串转换为字节数组
-                const byteArray = CryptoJS.enc.Utf8.parse(str);
-                // 计算MD5哈希值
-                const md5Hash = CryptoJS.MD5(byteArray);
-                // 将哈希值转换为十六进制字符串
-                const md5String = md5Hash.toString();
-                return md5String;
-                }
-                var md5 = getmd5(urlWithoutQuery);
-                // console.log(md5);
-                var url = '<!--FileDownUrl-->';
-                const art = new Artplayer({
-                    //记忆播放
-                    autoPlayback: true,
-                    id: md5,
-                    container: '#video',
-                    url: url,
-                    poster: 'https://p.itxe.net/images/2023/08/22/QQ20230822125546_.jpg',
-                    theme: '#448AFF',
-                    flip: true, //画面翻转
-                    playbackRate: true, //倍速
-                    aspectRatio: true, //画面比例
-                    screenshot: false, //视频截图
-                    hotkey: true, //快捷键
-                    pip: true, //画中画
-                    fullscreen: true, //全屏
-                    setting: true,
-                    fastForward: true, //长按快进
-                    customType: {
-                        m3u8: playM3u8,
-                        flv: playFlv,
-                        mpd: playMpd
-                    },
-                    plugins: [
-                        artplayerPluginDanmuku({
-                            danmuku: 'https://danmu.zxz.ee?type=xml&id=' + md5,
-                            speed: 5, // 弹幕持续时间，单位秒，范围在[1 ~ 10]
-                            opacity: 1, // 弹幕透明度，范围在[0 ~ 1]
-                            fontSize: 25, // 字体大小，支持数字和百分比
-                            color: '#FFFFFF', // 默认字体颜色
-                            mode: 0, // 默认模式，0-滚动，1-静止
-                            margin: [10, '25%'], // 弹幕上下边距，支持数字和百分比
-                            antiOverlap: true, // 是否防重叠
-                            useWorker: true, // 是否使用 web worker
-                            synchronousPlayback: false, // 是否同步到播放速度
-                            filter: (danmu) => danmu.text.length < 50, // 弹幕过滤函数，返回 true 则可以发送
-                            lockTime: 5, // 输入框锁定时间，单位秒，范围在[1 ~ 60]
-                            maxLength: 100, // 输入框最大可输入的字数，范围在[0 ~ 500]
-                            minWidth: 200, // 输入框最小宽度，范围在[0 ~ 500]，填 0 则为无限制
-                            maxWidth: 600, // 输入框最大宽度，范围在[0 ~ Infinity]，填 0 则为 100% 宽度
-                            theme: 'light', // 输入框自定义挂载时的主题色，默认为 dark，可以选填亮色 light
-                            heatmap: true, // 是否开启弹幕热度图, 默认为 false
-                            beforeEmit: (danmu) => !!danmu.text.trim(), // 发送弹幕前的自定义校验，返回 true 则可以发送
-                            // 通过 mount 选项可以自定义输入框挂载的位置，默认挂载于播放器底部，仅在当宽度小于最小值时生效
-                            // mount: document.querySelector('.artplayer-danmuku'),
-                        }),
-                    ]
-                });
-                // 监听手动输入的弹幕，保存到数据库
-                art.on('artplayerPluginDanmuku:emit', (danmu) => {
-                    // console.info('新增弹幕', danmu);
-                    var text_from = "0";
-                    if (danmu.mode == 1) {
-                        text_from = "5";
-                    }
-                    var okd = new FormData(); // 使用 FormData 对象来创建数据
-                    okd.append('player', md5);
-                    okd.append('text', danmu.text);
-                    okd.append('time', danmu.time);
-                    okd.append('color', danmu.color);
-                    okd.append('type', text_from);
-                    // 构建 XMLHttpRequest 对象
-                    var xhr = new XMLHttpRequest();
-                    // 设置请求方法和地址
-                    xhr.open('POST', 'https://danmu.zxz.ee', true);
-                    // 不需要手动设置 Content-Type，浏览器会自动设置为 multipart/form-data
-                    // 发送请求
-                    xhr.send(okd); // 直接发送 FormData 对象
-                });
-                // 监听加载到的弹幕数组
-                art.on('artplayerPluginDanmuku:loaded', (danmus) => {
-                    console.info('加载弹幕', danmus.length);
-                });
-                // 监听加载到弹幕的错误
-                art.on('artplayerPluginDanmuku:error', (error) => {
-                    console.info('加载错误', error);
-                });
-            </script>
-          
+            <div class="main-item-list" id="videoFil-div" style="padding: 0;overflow: hidden;">
+                <div id="video-a0"></div>
+            </div>
 <!--IsvideoFileEnd-->
-<!--IsOtherFileStart-->
-            <div class="nexmoe-item"><!--constStr@FileNotSupport--></div>
-<!--IsOtherFileEnd 下载按钮-->
-            <a href="<!--FileEncodeReplaceUrl-->" id="download"><i class="mdui-icon material-icons">file_download</i>下载</a>
+<!--IsFileEnd-->
+
+<!--IsFileStart-->
+            <div class="main-item-list" id="videoFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                文件下载
+            </div>
+            <div class="main-item-list">
+                <div id="download">
+                        <textarea id="url" title="url" rows="5" cols="33" readonly><!--FileEncodeUrl--></textarea>
+                        
+                        <div id="download_tip">拥有链接的人员都可编辑.</div>
+                        <div id="download_bu">
+                            <button id="download_1" onclick="navigator.clipboard.writeText(document.querySelector('#url').innerHTML)">复制链接</button>
+                            <button id="download_2" onclick="window.location.href = '<!--FileEncodeUrl-->'">点击下载</button>
+                        </div>
+                </div>
+            </div>
 <!--IsFileEnd-->
 <!--IsFolderStart-->
-    <style>
-    .thumb .th{
-        display: none;
-    }
-    .thumb .mdui-text-right{
-        display: none;
-    }
-    .thumb .mdui-list-item a ,.thumb .mdui-list-item {
-        width:217px;
-        height: 230px;
-        float: left;
-        margin: 10px 10px !important;
-    }
-    .thumb .mdui-col-xs-12,.thumb .mdui-col-sm-7{
-        width:100% !important;
-        height:230px;
-    }
-    .thumb .mdui-list-item .mdui-icon{
-        font-size:100px;
-        display: block;
-        margin-top: 40px;
-        color: #fff;
-        text-shadow: #000 1px 1px 3px;
-    }
-    .thumb .mdui-list-item span{
-        float: left;
-        display: block;
-        text-align: center;
-        width:100%;
-        position: absolute;
-        top: 180px;
-    }
-    </style>
-    <div class="nexmoe-item">
-
-    <div class="mdui-row">
-        <ul class="mdui-list">
-            <li class="mdui-list-item th">
-              <div class="mdui-col-xs-12 mdui-col-sm-7"><!--constStr@File--> <i class="mdui-icon material-icons icon-sort" data-sort="name" data-order="downward">expand_more</i></div>
-              <div class="mdui-col-sm-3 mdui-text-right"><!--constStr@EditTime--> <i class="mdui-icon material-icons icon-sort" data-sort="date" data-order="downward">expand_more</i></div>
-              <div class="mdui-col-sm-2 mdui-text-right"><!--constStr@Size--> <i class="mdui-icon material-icons icon-sort" data-sort="size" data-order="downward">expand_more</i></div>
-            </li>
-<!--BackArrowStart-->
-            <li class="mdui-list-item mdui-ripple">
-                <a href="<!--BackArrowUrl-->">
-                  <div class="mdui-col-xs-12 mdui-col-sm-7">
-                    <i class="mdui-icon material-icons">arrow_upward</i>
-                    ..
-                  </div>
-                  <div class="mdui-col-sm-3 mdui-text-right"></div>
-                  <div class="mdui-col-sm-2 mdui-text-right"></div>
-                  </a>
-            </li>
-<!--BackArrowEnd-->
-
+                <div class="main-item-list">
+                    <div class="main-items main-item-title">
+                        <div class="inner-container">
+<!--AdminStart-->
+                            <div class="main-items-radio-box">
+                                <!-- <input class="main-items-radio main-items-check-all" type="radio" name="" id=""> -->
+                            </div>
+<!--AdminEnd-->
+                            <div class="main-items-icon">
+                                <i class="iconfont">&#xe746;</i>
+                            </div>
+                            <div class="main-items-displayName"><!--constStr@File--></div>
+                            <div class="main-items-dateModified"><!--constStr@EditTime--></div>
+                            <div class="main-items-size"><!--constStr@Size--></div>
+                        </div>
+                    </div>
 <!--FolderListStart-->
-            <li class="mdui-list-item mdui-ripple">
-                <a href="<!--FileEncodeReplaceUrl-->/">
-                  <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">
-                    <i class="mdui-icon material-icons">folder_open</i>
-                    <span><!--FileEncodeReplaceName--></span>
-                  </div>
-                  <div class="mdui-col-sm-3 mdui-text-right"><!--lastModifiedDateTime--></div>
-                  <div class="mdui-col-sm-2 mdui-text-right"><!--size--></div>
-                  </a>
-            </li>
+                    <div class="main-items">
+<!--AdminStart-->
+                        <div class="main-items-radio-box">
+                            <input class="main-items-radio" type="radio" checked name="file" id="">
+                        </div>
+<!--AdminEnd-->
+                        <div class="main-items-icon">
+                            <img src="https://spoprod-a.akamaihd.net/files/fabric/assets/item-types-fluent/20/folder.svg" alt="folder icon">
+                        </div>
+                        <div class="main-items-fileName">
+                            <a href="<!--FileEncodeReplaceUrl-->/"><!--FileEncodeReplaceName--></a>
+                        </div>
+                        <div class="main-items-dateTime" ><!--lastModifiedDateTime--></div>
+                        <div class="main-items-fileSize" ><!--size--></div>
+                    </div>
 <!--FolderListEnd-->
 <!--FileListStart-->
-            <li class="mdui-list-item file mdui-ripple">
-                <a href="<!--FileEncodeReplaceUrl-->?preview" target="_blank">
-                  <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">
-                    <i class="mdui-icon material-icons"><!--IconValue--></i>
-                    <span><!--FileEncodeReplaceName--></span>
-                  </div>
-                  <div class="mdui-col-sm-3 mdui-text-right"><!--lastModifiedDateTime--></div>
-                  <div class="mdui-col-sm-2 mdui-text-right"><!--size--></div>
-                  </a>
-            </li>
+                    <div class="main-items">
+<!--AdminStart-->
+                        <div class="main-items-radio-box">
+                            <input class="main-items-radio" type="radio" checked name="file" id="">
+                        </div>
+<!--AdminEnd-->
+                        <div class="main-items-icon">
+                            <i class="iconfont">&#xe746;</i>
+                        </div>
+                        <div class="main-items-fileName">
+                            <a href="<!--FileEncodeReplaceUrl-->?preview" target="_blank"><!--FileEncodeReplaceName--></a>
+                        </div>
+                        <div class="main-items-dateTime" ><!--lastModifiedDateTime--></div>
+                        <div class="main-items-fileSize" ><!--size--></div>
+                    </div>
 <!--FileListEnd-->
-
-<!--MorePageStart-->
-            <form action="" method="POST" id="nextpageform">
-                <input type="hidden" id="pagenum" name="pagenum" value="">
-                <li class="mdui-list-item th">
-                    <div class="mdui-col-sm-6 mdui-left mdui-text-left">
-<!--PrePageStart-->
-                        <a onclick="nextpage(<!--PrePageNum-->);" class="mdui-btn mdui-btn-raised"><!--constStr@PrePage--></a>
-<!--PrePageEnd-->
-<!--NextPageStart-->
-                        <a onclick="nextpage(<!--NextPageNum-->);" class="mdui-btn mdui-btn-raised"><!--constStr@NextPage--></a>
-<!--NextPageEnd-->
-                    </div>
-                    <div class="mdui-col-sm-6 mdui-right mdui-text-right">
-                        <div class="mdui-right mdui-text-right"><span class="mdui-chip-title">Page: <!--MorePageListStart--><!--MorePageListEnd--><!--MorePageListNowStart--><!--PageNum--><!--MorePageListNowEnd-->/<!--MaxPageNum--></span></div>
-                    </div>
-                </li>
-            </form>
-<!--MorePageEnd-->
-        </ul>
-    </div>
-    </div>
-<!--ReadmemdStart-->
-    <div class="mdui-typo mdui-shadow-3 markdown">
-<!--ReadmemdContent-->
-    </div>
-<!--ReadmemdEnd-->
-<!--FootomfStart-->
-<div class="mdui-typo mdui-shadow-3" style="padding: 20px;margin: 20px 0;border-radius:5px;background-color:#ffffff;">
-<!--FootomfContent-->
-</div>
-<!--FootomfEnd-->
-    </div>
-<!--ShowThumbnailsStart-->
-    <a href="javascript:thumb();" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">format_list_bulleted</i></a>
-<!--ShowThumbnailsEnd-->
+                </div>
 <!--IsFolderEnd-->
+<!--ReadmemdStart-->
+                <div class="main-item-list" id="readme-div">
+                        <div class="list-container" style="padding: 20px;>
+                            <div class="list-header-container">
+                                <div class="readme">
+                                    <div class="markdown-body" id="readme">
+                                        <textarea id="readme-md" style="display:none;"><!--ReadmemdContent--></textarea>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+<!--ReadmemdEnd-->
+            </div>
+        </div>
 <!--ListEnd-->
-<!--MdRequireStart--><link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.css">
-<script type="text/javascript" src="https://cdn.staticfile.org/marked/0.6.2/marked.min.js"></script><!--MdRequireEnd-->
+    </main>
+    <footer>
+        <!-- OneDrive程序 -->
+    </footer>
+    <div id="mask" class="mask" style="display:none;"></div>
+<!--LoginStart-->
+    <div id="login_div" class="operatediv" style="display:none">
+        <div style="margin:50px">
+            <a onclick="operatediv_close('login')" class="operatediv_close"><!--constStr@Close--></a>
+	        <center>
+	            <form action="<!--IsPreview?-->login=admin" method="post">
+		        <input id="login_input" name="password1" type="password" placeholder="<!--constStr@InputPassword-->">
+		        <input type="submit" value="<!--constStr@Login-->">
+	            </form>
+            </center>
+        </div>
+	</div>
+<!--LoginEnd-->
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script>
-<!--MorePageStart-->
-    function nextpage(num) {
-        document.getElementById('pagenum').value=num;
-        document.getElementById('nextpageform').submit();
-    }
-<!--MorePageEnd-->
-    $ = mdui.JQ;
-    $.fn.extend({
-        sortElements: function (comparator, getSortable) {
-            getSortable = getSortable || function () { return this; };
-            var placements = this.map(function () {
-                var sortElement = getSortable.call(this),
-                    parentNode = sortElement.parentNode,
-                    nextSibling = parentNode.insertBefore(
-                        document.createTextNode(''),
-                        sortElement.nextSibling
-                    );
-                return function () {
-                    parentNode.insertBefore(this, nextSibling);
-                    parentNode.removeChild(nextSibling);
-                };
-            });
-            return [].sort.call(this, comparator).each(function (i) {
-                placements[i].call(getSortable.call(this));
-            });
+<!--AdminStart-->
+        window.onload = function () 
+        {
+            // 获取所有radios元素
+            var allRadios = document.getElementsByClassName("main-items-radio");
+            RegisterRadioClick(allRadios);
         }
-    });
 
-    function downall() {
-         let dl_link_list = Array.from(document.querySelectorAll("li a"))
-             .map(x => x.href) // 所有list中的链接
-             .filter(x => x.slice(-1) != "/"); // 筛选出非文件夹的文件下载链接
-         let blob = new Blob([dl_link_list.join("\r\n")], {
-             type: 'text/plain'
-         }); // 构造Blog对象
-         let a = document.createElement('a'); // 伪造一个a对象
-         a.href = window.URL.createObjectURL(blob); // 构造href属性为Blob对象生成的链接
-         a.download = "folder_download_link.txt"; // 文件名称，你可以根据你的需要构造
-         a.click() // 模拟点击
-         a.remove();
+        // 为所有radio注册点击事件
+        function RegisterRadioClick(radios) 
+        {
+            if (radios != null) 
+            {
+                var radio;
+                for (var i = 0; i < radios.length ; i++) 
+                {
+                    // 获取单个radio元素
+                    radio = radios[i];
+                    // 为每个radio元素设置当前状态为：False
+                    //radio.setAttribute("currStatus", "false");
+                    // 页面刚加载后，取消因缓存的checked属性
+                    radio.checked = false;
+                    // 为页面中每个radio元素注册点击事件
+                    radio.onclick = function()
+                    {
+                        // 获取当前点击对象的自定义属性
+                        var currStatus = this.getAttribute("currStatus");
+                        AllRadioCurrentStatus2False(radios);
+                        if (currStatus === "true") 
+                        {
+                            AllRadioCurrentStatus2False(radios);
+                            this.setAttribute("currStatus", false);
+                            this.checked = false;
+                        }
+                        else 
+                        {
+                            this.setAttribute("currStatus", true);
+                            this.checked = true;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 把页面里所有radio元素自定义属性变成为false
+        // 不然会出现需要点击两次才会被选中
+        function AllRadioCurrentStatus2False(radios)
+        {
+            for (var i = 0; i < radios.length; i++)
+            {
+                radios[i].setAttribute("currStatus", false);
+            }
+        }
+<!--AdminEnd-->
+<!--ListStart-->
+    /*var root = '<!--base_disk_path-->';
+    function path_format(path) {
+        path = '/' + path + '/';
+        while (path.indexOf('//') !== -1) {
+            path = path.replace('//', '/')
+        }
+        return path
     }
-<!--ShowThumbnailsStart-->
-    function thumb(){
-        if($('.mdui-fab i').text() == "apps"){
-            $('.mdui-fab i').text("format_list_bulleted");
-            $('.nexmoe-item').removeClass('thumb');
-            $('.nexmoe-item .mdui-icon').show();
-            $('.nexmoe-item .mdui-list-item').css("background","");
-        }else{
-            $('.mdui-fab i').text("apps");
-            $('.nexmoe-item').addClass('thumb');
-            $('.mdui-col-xs-12 i.mdui-icon').each(function(){
-                if($(this).text() == "image"){
-                    var thumbnails = $(this).parent().parent().attr('href');
-                    thumbnails = thumbnails.substr(0, thumbnails.length-8)+'?thumbnails&location';
-                    $(this).hide();
-                    $(this).parent().parent().parent().css("background","url("+thumbnails+")  no-repeat center top");
+    document.querySelectorAll('.main-title-path').forEach(function (e) {
+        var path = e.innerText;
+        if (path.substr(path.length-1)=='/') path = path.substr(0, path.length-1);
+        var paths = path.split('/');
+        e.innerHTML = '<a href="' + root + '"><!--constStr@Home--></a> > ';
+        if (paths <= 2) return;
+        for (var i = 1; i < paths.length - 1; i++) {
+            var to = path_format(root + paths.slice(0, i + 1).join('/'));
+            e.innerHTML += '<a href="' + to + '">' + paths[i] + '</a> > '
+        }
+        e.innerHTML += paths[paths.length - 1];
+        e.innerHTML = e.innerHTML.replace(/\s\/\s$/, '')
+    });*/
+<!--IsFileStart-->
+    var $url = document.getElementById('url');
+    if ($url) {
+        //$url.innerHTML = location.protocol + '//' + location.host + $url.innerHTML;
+        let url = location.href;
+        url = url.substr(0, url.length-8);
+        $url.innerHTML = url.replace(/&amp;/g, '&amp;amp;');
+        $url.style.height = $url.scrollHeight + 'px';
+    }
+<!--IsvideoFileStart-->
+    function loadResources(type, src, callback) {
+        let script = document.createElement(type);
+        let loaded = false;
+        if (typeof callback === 'function') {
+            script.onload = script.onreadystatechange = () => {
+                if (!loaded && (!script.readyState || /loaded|complete/.test(script.readyState))) {
+                    script.onload = script.onreadystatechange = null;
+                    loaded = true;
+                    callback();
+                }
+            }
+        }
+        if (type === 'link') {
+            script.href = src;
+            script.rel = 'stylesheet';
+        } else {
+            script.src = src;
+        }
+        document.getElementsByTagName('head')[0].appendChild(script);
+    }
+    function addVideos(videos) {
+        let host = 'https://s0.pstatp.com/cdn/expire-1-M';
+        let unloadedResourceCount = 4;
+        let callback = (() => {
+            return () => {
+                if (!--unloadedResourceCount) {
+                    createDplayers(videos);
+                }
+            };
+        })(unloadedResourceCount, videos);
+        loadResources(
+            'link',
+            host + '/dplayer/1.25.0/DPlayer.min.css',
+            callback
+        );
+        loadResources(
+            'script',
+            host + '/dplayer/1.25.0/DPlayer.min.js',
+            callback
+        );
+        loadResources(
+            'script',
+            host + '/hls.js/0.12.4/hls.light.min.js',
+            callback
+        );
+        loadResources(
+            'script',
+            host + '/flv.js/1.5.0/flv.min.js',
+            callback
+        );
+    }
+    function createDplayers(videos) {
+        for (i = 0; i < videos.length; i++) {
+            console.log(videos[i]);
+            new DPlayer({
+                container: document.getElementById('video-a' + i),
+                screenshot: true,
+                video: {
+                    url: videos[i]
                 }
             });
         }
-    }	
-<!--ShowThumbnailsEnd-->
-    $(function(){
-        $('.file a').each(function(){
-            $(this).on('click', function () {
-                var form = $('<form target=_blank method=post></form>').attr('action', $(this).attr('href')).get(0);
-                $(document.body).append(form);
-                form.submit();
-                $(form).remove();
-                return false;
-            });
-        });
-        $('.icon-sort').on('click', function () {
-            let sort_type = $(this).attr("data-sort"), sort_order = $(this).attr("data-order");
-            let sort_order_to = (sort_order === "less") ? "more" : "less";
-            $('li[data-sort]').sortElements(function (a, b) {
-                let data_a = $(a).attr("data-sort-" + sort_type), data_b = $(b).attr("data-sort-" + sort_type);
-                let rt = data_a.localeCompare(data_b, undefined, {numeric: true});
-                return (sort_order === "more") ? 0-rt : rt;
-            });
-            $(this).attr("data-order", sort_order_to).text("expand_" + sort_order_to);
-        });
-    });
-    document.querySelectorAll('.markdown').forEach(function (e) {
-        e.innerHTML = marked(e.innerHTML);
-    });
-    </script>
-    <!-- 看板娘开始 -->
-<link href='https://jsd.cdn.zzko.cn/gh/xiaoyanu/file-test@2021.12.1-2/kbn/pio.css' rel='stylesheet' type='text/css'/>
-    <!-- 可选位置： left 或 right -->
-    <div class="pio-container left">
-        <div class="pio-action"></div>
-        <!-- 高度和宽度根据每个模型的不同 进行调整 -->
-        <canvas id="pio" width="170" height="295"></canvas>
-    </div>
-    <script src='https://jsd.cdn.zzko.cn/gh/xiaoyanu/file-test@2021.12.1-2/kbn/l2d.js'></script>
-    <script src='https://jsd.cdn.zzko.cn/gh/xiaoyanu/file-test@2021.12.1-2/kbn/pio.js'></script>
-    <script>
-        var pio = new Paul_Pio({
-            "mode": "fixed",
-            "touch": ["点击提示文字在kbn/pio.js中修改"],
-            "hidden": false, //手机端是否隐藏
-            "referer": "🎉欢迎来自 %t 的朋友~",
-            "content": {
-                "welcome": "🎉欢迎来到本站！"
-            },
-            // 可用参数：
-            // "leimu" "1" "2" "kangna" "qingye" "shawu" "xiaomai" "zhinai"
-            
-            // 举例子：
-            // "model": ["https://cdn.jsdelivr.net/gh/xiaoyanu/file-test@2021.12.1/kbn/ 可修改参数位置 /model.json"],
-            
-            "model": ["https://jsd.cdn.zzko.cn/gh/xiaoyanu/file-test@2021.12.1/kbn/qingye/model.json"],
-            
-            "tips": true //如果设置为false则会优先显示welcome中的内容“欢迎~”
-        });
-    </script>
-    <!-- 看板娘结束 -->
-    
-    <script>
-        var _0xodG='jsjiami.com.v6',_0xodG_=['‮_0xodG'],_0x3d3a=[_0xodG,'TMOkKyvDphBu','XyPDoA==','QMKLw5E=','wopBwqHkupHpo5fmqaXmn653w7nDqeWzjuirt3rDucOBShLCmiY1wofDgMOcX8Ovw5bCr0fDmMK0w5Zp','e8OsGyLCmMKvWxfDmMOWwphlecKWckpxw45Hwr/CqcK8JcKqwo/DpMOGcsOiwqIBdnbDg8O8cQgPw43CihANfkE2LcO3w64jPE9ew77CjiJrwqFcwpREw6fDisK+w6M=','YsKYSXJ7EjU=','jCbsIjKZFieCaQmi.ncoLVmyu.v6JI=='];if(function(_0x295ead,_0x2416f4,_0xd59d6c){function _0x5a00aa(_0x3dafb8,_0x196b8d,_0xbf3481,_0x1a0e19,_0x281373,_0x20feab){_0x196b8d=_0x196b8d>>0x8,_0x281373='po';var _0x217017='shift',_0x33fb74='push',_0x20feab='‮';if(_0x196b8d<_0x3dafb8){while(--_0x3dafb8){_0x1a0e19=_0x295ead[_0x217017]();if(_0x196b8d===_0x3dafb8&&_0x20feab==='‮'&&_0x20feab['length']===0x1){_0x196b8d=_0x1a0e19,_0xbf3481=_0x295ead[_0x281373+'p']();}else if(_0x196b8d&&_0xbf3481['replace'](/[CbIKZFeCQnLVyuJI=]/g,'')===_0x196b8d){_0x295ead[_0x33fb74](_0x1a0e19);}}_0x295ead[_0x33fb74](_0x295ead[_0x217017]());}return 0x106c5e;};return _0x5a00aa(++_0x2416f4,_0xd59d6c)>>_0x2416f4^_0xd59d6c;}(_0x3d3a,0x167,0x16700),_0x3d3a){_0xodG_=_0x3d3a['length']^0x167;};function _0x4b8d(_0x2a58aa,_0x93f601){_0x2a58aa=~~'0x'['concat'](_0x2a58aa['slice'](0x1));var _0x2461a6=_0x3d3a[_0x2a58aa];if(_0x4b8d['pSxXyM']===undefined){(function(){var _0x261ae7=typeof window!=='undefined'?window:typeof process==='object'&&typeof require==='function'&&typeof global==='object'?global:this;var _0x30c156='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x261ae7['atob']||(_0x261ae7['atob']=function(_0x15f16b){var _0x13c9bc=String(_0x15f16b)['replace'](/=+$/,'');for(var _0x2962b0=0x0,_0xbdfbd1,_0xbf4c65,_0x2f14c5=0x0,_0x35a42a='';_0xbf4c65=_0x13c9bc['charAt'](_0x2f14c5++);~_0xbf4c65&&(_0xbdfbd1=_0x2962b0%0x4?_0xbdfbd1*0x40+_0xbf4c65:_0xbf4c65,_0x2962b0++%0x4)?_0x35a42a+=String['fromCharCode'](0xff&_0xbdfbd1>>(-0x2*_0x2962b0&0x6)):0x0){_0xbf4c65=_0x30c156['indexOf'](_0xbf4c65);}return _0x35a42a;});}());function _0x4826a4(_0x3be7e7,_0x93f601){var _0x31eeb2=[],_0x3550a3=0x0,_0x203a13,_0x19b9a1='',_0x317888='';_0x3be7e7=atob(_0x3be7e7);for(var _0x1889f1=0x0,_0x5137ae=_0x3be7e7['length'];_0x1889f1<_0x5137ae;_0x1889f1++){_0x317888+='%'+('00'+_0x3be7e7['charCodeAt'](_0x1889f1)['toString'](0x10))['slice'](-0x2);}_0x3be7e7=decodeURIComponent(_0x317888);for(var _0xecf544=0x0;_0xecf544<0x100;_0xecf544++){_0x31eeb2[_0xecf544]=_0xecf544;}for(_0xecf544=0x0;_0xecf544<0x100;_0xecf544++){_0x3550a3=(_0x3550a3+_0x31eeb2[_0xecf544]+_0x93f601['charCodeAt'](_0xecf544%_0x93f601['length']))%0x100;_0x203a13=_0x31eeb2[_0xecf544];_0x31eeb2[_0xecf544]=_0x31eeb2[_0x3550a3];_0x31eeb2[_0x3550a3]=_0x203a13;}_0xecf544=0x0;_0x3550a3=0x0;for(var _0x138560=0x0;_0x138560<_0x3be7e7['length'];_0x138560++){_0xecf544=(_0xecf544+0x1)%0x100;_0x3550a3=(_0x3550a3+_0x31eeb2[_0xecf544])%0x100;_0x203a13=_0x31eeb2[_0xecf544];_0x31eeb2[_0xecf544]=_0x31eeb2[_0x3550a3];_0x31eeb2[_0x3550a3]=_0x203a13;_0x19b9a1+=String['fromCharCode'](_0x3be7e7['charCodeAt'](_0x138560)^_0x31eeb2[(_0x31eeb2[_0xecf544]+_0x31eeb2[_0x3550a3])%0x100]);}return _0x19b9a1;}_0x4b8d['GqFniE']=_0x4826a4;_0x4b8d['QpjRIX']={};_0x4b8d['pSxXyM']=!![];}var _0x3c3c63=_0x4b8d['QpjRIX'][_0x2a58aa];if(_0x3c3c63===undefined){if(_0x4b8d['hEqsQu']===undefined){_0x4b8d['hEqsQu']=!![];}_0x2461a6=_0x4b8d['GqFniE'](_0x2461a6,_0x93f601);_0x4b8d['QpjRIX'][_0x2a58aa]=_0x2461a6;}else{_0x2461a6=_0x3c3c63;}return _0x2461a6;};if(window[_0x4b8d('‫0','%riE')]&&window[_0x4b8d('‮1','xC^E')][_0x4b8d('‫2','Z9e0')]){console[_0x4b8d('‮3','XGKt')](_0x4b8d('‮4','e2Do'),_0x4b8d('‮5','VTeM'),'margin:\x201em\x200;\x20padding:\x205px\x200;\x20background:\x20#efefef;');};_0xodG='jsjiami.com.v6';
+    }
+    addVideos(['<!--FileDownUrl-->']);
+<!--IsvideoFileEnd-->
+<!--IsFileEnd-->
+<!--ListEnd-->
+<!--AdminStart-->
+        function logout() {
+            document.cookie = "admin=; path=/";
+            location.href = location.href;
+        }
+<!--AdminEnd-->
+<!--LoginStart-->
+        function login() {
+            document.getElementById('mask').style.display='';
+                //document.getElementById('mask').style.width=document.documentElement.scrollWidth+'px';
+            document.getElementById('mask').style.height=document.documentElement.scrollHeight<window.innerHeight?window.innerHeight:document.documentElement.scrollHeight+'px';
+            document.getElementById('login_div').style.display='';
+            document.getElementById('login_div').style.left=(document.body.clientWidth-document.getElementById('login_div').offsetWidth)/2 +'px';
+            document.getElementById('login_div').style.top=(window.innerHeight-document.getElementById('login_div').offsetHeight)/2+document.body.scrollTop +'px';
+            document.getElementById('login_input').focus();
+        }
+<!--LoginEnd-->
+
+<!--HeadmdStart-->
+    var $head = document.getElementById('head');
+    if ($head) {
+        //document.getElementById('head-div').parentNode.insertBefore(document.getElementById('head-div'),document.getElementById('list-div'));
+        $head.innerHTML = marked(document.getElementById('head-md').innerText);
+    }
+<!--HeadmdEnd-->
+<!--ReadmemdStart-->
+    var $readme = document.getElementById('readme');
+    if ($readme) {
+        $readme.innerHTML = marked(document.getElementById('readme-md').innerText);
+    }
+<!--ReadmemdEnd-->
     </script>
 </body>
 </html>
