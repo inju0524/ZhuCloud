@@ -142,6 +142,42 @@
 </div>
 <!--MultiDiskAreaEnd-->
 		<main>
+		
+<!-- 加密文件夹 -->
+<!--EncryptedStart-->
+            <div class="Contents" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                加密文件夹
+            </div>
+            <div class="Contents" id="need—pw-div" style="padding: 50px 30px; font-size: larger; font-weight: bold;">
+                <center>
+                    <form action="" method="post">
+                    <input class="code" id="password1" name="password1" type="password" placeholder="请输入文件夹密码">
+                    <br>
+                    <input class="UglyButton astro-5BUYZ7RE" type="submit" value="确认">
+                    </form>
+                </center>
+            </div>
+<!--EncryptedEnd-->
+
+		<!-- 游客上传 -->
+<!--GuestUploadStart-->
+            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                文件上传
+            </div>
+
+            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                <div id="upload_div">
+                    <div id="upload_btns" align="center">
+                        <select onchange="document.getElementById('upload_file').webkitdirectory=this.value;">
+                            <option value="">文件</option>
+                            <option value="1">文件夹</option>
+                        </select>
+                        <div id="upload_file_bu">上传文件<input id="upload_file" type="file" name="upload_filename" multiple="multiple"></div>
+                        <input id="upload_submit" onclick="preup();" value="上传" type="button">
+                    </div>
+                </div>
+            </div>
+<!--GuestUploadEnd-->
 
 		    <!--HeadomfStart-->
 		        <div class="Contents">
@@ -203,41 +239,6 @@
     </div>
 </div>
 
-<!-- 加密文件夹 -->
-<!--EncryptedStart-->
-            <div class="Contents" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                加密文件夹
-            </div>
-            <div class="Contents" id="need—pw-div" style="padding: 50px 30px; font-size: larger; font-weight: bold;">
-                <center>
-                    <form action="" method="post">
-                    <input class="code" id="password1" name="password1" type="password" placeholder="请输入文件夹密码">
-                    <br>
-                    <input class="UglyButton astro-5BUYZ7RE" type="submit" value="确认">
-                    </form>
-                </center>
-            </div>
-<!--EncryptedEnd-->
-
-		<!-- 游客上传 -->
-<!--GuestUploadStart-->
-            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                文件上传
-            </div>
-
-            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                <div id="upload_div">
-                    <div id="upload_btns" align="center">
-                        <select onchange="document.getElementById('upload_file').webkitdirectory=this.value;">
-                            <option value="">文件</option>
-                            <option value="1">文件夹</option>
-                        </select>
-                        <div id="upload_file_bu">上传文件<input id="upload_file" type="file" name="upload_filename" multiple="multiple"></div>
-                        <input id="upload_submit" onclick="preup();" value="上传" type="button">
-                    </div>
-                </div>
-            </div>
-<!--GuestUploadEnd-->
 
 
 <!--FolderListStart-->
