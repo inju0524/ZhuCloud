@@ -11,468 +11,235 @@
         <title><!--Title--></title>
 
 
-  <!--MdRequireStart-->
-    <link rel="stylesheet" href="https://unpkg.com/github-markdown-css@3.0.1/github-markdown.css">
-    <script type="text/javascript" src="?jsFile=marked.js"></script>
-    <!--MdRequireEnd-->
-    <!--IsFileStart--><!--IspdfFileStart--><script src="https://unpkg.com/pdfjs-dist@2.4.456/build/pdf.min.js"></script><!--IspdfFileEnd--><!--IsFileEnd-->
-    <!--https://p.sfx.ms/images/favicon.ico-->
-    <!--GuestUploadStart--><script type="text/javascript" src="?jsFile=spark-md5.min.js"></script><!--GuestUploadEnd-->
+        <!--MdRequireStart-->
+            <link rel="stylesheet" href="https://charo.koto.cc/aom-assets/depends/marked/github-markdown.css">
+            <script src="https://charo.koto.cc/aom-assets/depends/marked/marked.js"></script>
+        <!--MdRequireEnd-->
+        <!--GuestUploadStart--><script type="text/javascript" src="?jsFile=spark-md5.min.js"></script><!--GuestUploadEnd-->
     <!--AliyundriveUploadJsStart--><script src="https://unpkg.com/bignumber.js@9.0.2/bignumber.js"></script><script src="?jsFile=sha1.min.js"></script><!--AliyundriveUploadJsEnd-->
-
 
         <!--customCss-->
 	<link rel="stylesheet" href="https://charo.koto.cc/aom-assets/_astro/allinone.43fc9617.css" />
 <link rel="stylesheet" href="https://charo.koto.cc/aom-assets/_astro/allinone.11a782e3.css" /><script type="module" src="https://charo.koto.cc/aom-assets/_astro/hoisted.d9ceb923.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/s.6.14.1.min.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/MultiDisk-legacy.a36c04d2.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/hoisted-legacy.dc9c781c.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/hoisted-legacy.fd96d87d.js"></script>
 
 <style>
-
-
-        /* main */
-        main { 
-            position: relative;
-            height: 100%;
-            background: #f0f0f4;
-            <!--BackgroundStart-->background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-image:url("<!--BackgroundUrl-->");<!--BackgroundEnd-->
-            <!--BackgroundMStart-->background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-image:url("<!--BackgroundMUrl-->");}<!--BackgroundMEnd-->
-        }
-
-
-        main .scroll {
-            position: absolute;
-        }
-        .scroll {
-            overflow-y: auto;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            padding: 48px 0 100px 0;
-        }
         
-        main .main-item-list {
-            display: flex;
-            flex-direction: column;
-            height: auto;
-            background: rgba(255,255,255,0.8);
-            margin: 20px;
-            line-height: 32px;
-            font-size: 14px;
-            box-sizing: border-box;
-            border-radius: 12px;
-            border: #e0e0e0 solid 1px;
-            padding: 12px 0;
-            backdrop-filter: blur(20px);
-        }
-        main .main-title h1 {
-            margin: 0;
-            padding: 32px 32px 10px 32px;
-            font-size: 19px;
-            font-weight: 600;
-        }
-        div.main-title > h1 > a:last-of-type {
-            font-weight: 600;
-            color: rgb(36, 36, 36);
-        }
-
-
-        main .main-items:hover { 
-            background-color: #F4F4F4;
-            transform: scale(0.980);
-            border-radius: 10px;
-        }
-        main .main-item-list .inner-container {
-            display: flex;
-            justify-content: flex-start;
-            width: 100%;
-            height: auto;
-            box-sizing: border-box;
-
-        }
-        main .main-item-list .inner-container > div {
-            padding-left: 12px;
-            padding-right: 8px;
-            box-sizing: border-box;
-            text-wrap: nowrap;
-            font-weight: 600;
-        }
-        div.main-items.main-item-title > div > div.main-items-icon {
-            display: none;
-        }
-        main .main-item-list .main-item-title { 
-            border-bottom: 1px solid #EAEAEA;
-        }
-        main .main-item-list .main-items-radio-box {
-            width: 48px;
-            height: 32px;
-            line-height: 40px;
-            text-align: center;
-        }
-        main .main-item-list .main-items-radio-box .main-items-radio {
-            display: none;
-            width: 18px;
-            height: 18px;
-        }
-        main .main-item-list .main-items-radio-box .main-items-radio[currstatus=true] {
-            display: block;
-        }
-        main .main-item-list .main-items-icon {
-            min-width: 38px;
-            height: 32px;
-            line-height: 32px;
-            text-align: center;
-        }
-        main .main-item-title .main-items-icon {
-            height: 32px!important;
-            line-height: 9px!important;
-        }
-        main .main-item-title .main-items-icon:hover,
-        main .main-item-list .main-items-displayName:hover,
-        main .main-item-list .main-items-dateModified:hover,
-        main .main-item-list .main-items-size:hover { 
-            background-color: #EAEAEA; 
-        }
-        main .main-item-list .main-items-icon .iconfont {
-            font-size: 20px;
-        }
-        main .main-item-list .main-items-icon img {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-        }
-        main .main-items {
-            display: flex;
-            justify-content: flex-start;
-            box-sizing: border-box;
-            padding: 0 20px;
-            overflow: hidden;
-            transition: 0.5s;
-            margin-top: 2.5px;
-            margin-bottom: 2.5px;
-        }
-        main .main-item-list .main-items-displayName,
-        main .main-item-list .main-items-fileName { 
-            width: 520px;
-        }
-        main .main-item-list .main-items-dateModified,
-        main .main-item-list .main-items-dateTime { 
-            width: 250px; 
-        }
-        main .main-item-list .main-items-size,
-        main .main-item-list .main-items-fileSize { 
-            width: 180px;
-        }
-        main .main-item-list .main-items-radio-box,
-        main .main-item-list .main-items-icon,
-        main .main-item-list .main-items-fileName,
-        main .main-item-list .main-items-dateTime,
-        main .main-item-list .main-items-fileSize {
-            padding: 11px 8px 11px 12px;
-            height: 42px;
-            line-height: 22px;
-            font-family: "Microsoft Yahei UI", Verdana, Simsun, "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
-            white-space: nowrap;
-            /* text-overflow: ellipsis; */
-            box-sizing: border-box;
-            overflow: hidden;
-        }
-        main .main-item-list .main-items-radio-box,
-        main .main-item-list .main-items-icon {
-            overflow: initial;
-        }
-
-        main .main-item-list .main-items-fileName a {
-            color: inherit;
-        }
-        main .main-item-list .main-items-fileName a:hover {
-            text-decoration: underline;
-        }
-        .more-disk{
-            vertical-align: middle;
-            overflow: hidden;
-            text-overflow:ellipsis;
-            white-space: nowrap;
-            display: inline-block;
-            max-width: 100px;
-        }
-        .more-disk div{
-            list-style:none;
-            position:absolute;
-            display:none;background:#ffffff;border-radius:5px;margin:0 0 0 -10px;/*padding:0 7px;*/color:#205D67;z-index:1;
-            box-shadow: 0 0.5em 3em rgba(161,177,204,.4);
-        }
-        .more-disk:hover div{display:block}
-        .more-disk div li{line-height:normal;padding: 3px 10px;}
-        .more-disk div li a{text-decoration: none; color:rgba(0,0,0,.3);}
-        .more-disk div li a:hover{color:rgba(0,0,0,.87);}
-        .more-disk div li a[now]{color:rgba(0,0,0,1);}
-
-        #download{
-            display: flex;
-            flex-direction: column;
-            padding: 10px 20px 10px 20px;
-        }
-
-        #download_bu{
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        #download_bu button{
-            width: auto;
-            font-size: 15px;
-            margin-left: 20px;
-            border-radius: 8px;
-            border: 2px solid #0078d4;
-            padding: 6px 20px 6px 20px;
-            transition: 0.5s;
-        }
-
-        #download_bu button:active{transform: scale(0.9);}
-        #download_1{background: white;color: #0078d4;}
-        #download_2{background: #0078d4; color: white;}
-        #download_1:hover{background: rgb(233, 233, 233);}
-        #download_2:hover{background: #006cbe;}
-
-        textarea{
-            padding: 10px;
-            resize: none;
-            border: 1px solid #c8c6c4;
-            border-bottom: 2px solid #3b3a39;
-            border-radius: 8px;
-            outline: none;
-            overflow: hidden;
-            transition: 0.5s;
-            font-family: "Microsoft Yahei UI", Verdana, Simsun, "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
-        }
-        textarea:hover{border-bottom: 2px solid #0078d4;}
-
-        #pdf-d {display: flex;flex-direction: column;}
-
-        .scroll::-webkit-scrollbar {width: 5px;}
-        .scroll::-webkit-scrollbar-thumb {background: #a8a8a8;}
-        .scroll::-webkit-scrollbar-button {display: none;}
-
-        #upload_div {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .list-table {margin-top: 20px;}
-
-        #upload_div select,
-        #upload_div input,
-        #upload_div div{
-            font-size: 15px;
-            transition: 0.5s;
-            border-radius: 8px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-
-        #upload_div select{
-            border: 2px solid #c7c7c7;
-            padding: 10px 10px 6px 20px;
-            outline: none;
-        }
-        #upload_div select:hover{border: 2px solid #0078d4;}
-        #upload_submit{
-            border: 2px solid #0078d4;
-            padding: 6px 40px 6px 40px;
-            background-color: #0078d4;
-            color: #ffffff;
-        }
-        #upload_submit:hover{background: #006cbe;}
-        #upload_submit:active,#upload_file_bu:active{transform: scale(0.9);}
+#upload_file_bu:active{transform: scale(1.01);}
         #upload_file{
+            
             opacity: 0;
             position: absolute;
             width: 100%;
             height: 100%;
             left: 0;
             top: 0;
+                display: inline-block;
+
+            
             
         }
+        #upload_file:not([data-disabled="true"]):hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: #6a6a6a 1spx 1px 20px;
+}
         #upload_file_bu{
-            border: 2px solid #0078d4;
-            background-color: #ffffff;
-            font-weight: 400;
-            color: #0078d4;
-            position: relative;
-            padding: 6px 20px 6px 20px;
-            text-align: center;
+  
+    
+
+    width: aoto;
+    -webkit-transition: all .35s ease-in-out;
+    -webkit-transition: all .35s ease;
+    transition: all .35s ease;
+    background-color: #80808080;
+    border-radius: 16px;
+    padding: 10px 12px;
+    min-width: 0;
+    min-height: 40px;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    appearance: auto;
+    user-select: none;
+    white-space-collapse: preserve;
+    text-wrap: nowrap;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    color: buttontext;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+    background-color: #80808080;
         }
         #upload_btns{
-            display: flex;
-            justify-content: space-evenly;
-            text-align: center;
-            flex-wrap: wrap;
-        }
 
-        #need—pw-div input{
-            border: 1px solid #0078d4;
-            font-size: 16px;
-            background-color: #0078d4;
-            outline: none;
-            border-radius: 8px;
-            color: white;
-            padding: 10px 20px 10px 20px;
         }
-        input#password1{
-            border: 2px solid #0078d4;
-            background-color: white;
-            padding: 10px 10px 10px 10px;
-            margin-bottom: 40px;
-            color: #000;
-        }
-   </style>
+</style>
 
 </head>
 	<body>
 		<header>
-        <nav class="container">
-            <div class="title pull-left">
-                <a href="<!--base_path-->"><!--Sitename--></a>
-            </div>
-<!--LoginStart-->
-            <div class="pull-right">
-                <a class="pull-left" href="/?login=admin">登录</a>
-            </div>
-<!--LoginEnd-->
-        </nav>
-    </header>
-    <main>
-        <!--ListStart-->
-        <div class="scroll">
-        <div class="container">
-            <div class="main-title">
-                <h1 class="main-title-path">
-                    <a href="<!--base_path-->"><!--constStr@Home--></a>
-<!--DiskPathArrayStart-->
-                    >
-                    <a href="<!--PathArrayLink-->"><!--PathArrayName--></a>
-<!--DiskPathArrayEnd-->
-                </h1>
-            </div>
+	<span class="left">
+	<span onclick="SideBar.Open()" title="Open Sidebar.">
+			<svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:bars-3"><path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75zM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75z" clip-rule="evenodd"/></svg>
+			<!-- <Menu /> -->
+		</span>
+		<span onclick="MultiDisk.Expand()" title="Open multi disk controller">
+			<span class="ExpandIcon" data-ControllerHidden="true"><svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:chevron-down"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5z" clip-rule="evenodd"/></svg></span>
+		</span>
+		
+	</span>
 
-<!--HeadmdStart-->
-            <div class="main-item-list" id="head-div">
-                <div class="list-container" style="padding: 20px;">
-                    <div class="list-header-container">
-                        <div class="readme">
-                            <div class="markdown-body" id="head">
-                                <textarea id="head-md" style="display:none;"><!--HeadmdContent--></textarea>
-                            </div>
-                        </div>
+    <div class="Header">
+
+		<a class="title" href="/">
+			<img src="<!--base_path-->favicon.ico" alt="">
+			<span><!--Sitename--></span>
+    	</a>
+		
+		<span class="CurrentDriveName" onclick="MultiDisk.Expand();">
+			<span id="DriveName">(CurrentDriveName)</span>
+			<span class="ExpandIcon" data-ControllerHidden="true"><svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:chevron-down"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5z" clip-rule="evenodd"/></svg></span>
+		</span>
+
+    </div>
+
+	<span class="right">
+		<span onclick="ThemeSwitcher.Switch();" title="Switch theme, light or dark">
+			<span class="ThemeSwitcher astro-PLNBXQHS">
+    <span id="MoonIcon" style="display: inline-block;" class="astro-PLNBXQHS">
+        <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-PLNBXQHS" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162z" clip-rule="evenodd"/></svg>
+    </span>
+    <span id="SunIcon" style="display: none;" class="astro-PLNBXQHS">
+        <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-PLNBXQHS" astro-icon="heroicons:sun"><path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75zM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0zm11.394-5.834a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59zM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75zm-3.916 6.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591zM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18zm-4.242-.697a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59zM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12zm.697-4.243a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591z"/></svg>
+    </span>
+</span>
+		</span>
+		<span onclick="location.assign('/?login=admin')" title="Login">
+			<svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:arrow-right-on-rectangle"><path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 0 0 6 5.25v13.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V15a.75.75 0 0 1 1.5 0v3.75a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3V9A.75.75 0 0 1 15 9V5.25a1.5 1.5 0 0 0-1.5-1.5h-6zm10.72 4.72a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1 0 1.06l-3 3a.75.75 0 1 1-1.06-1.06l1.72-1.72H9a.75.75 0 0 1 0-1.5h10.94l-1.72-1.72a.75.75 0 0 1 0-1.06z" clip-rule="evenodd"/></svg>
+		</span>
+	</span>
+</header>
+
+<!--MultiDiskAreaStart-->
+<div class="MultiDiskContainer hidden astro-H4YAVCU5" id="more-disk-div">
+    <div class="MultiDisk astro-H4YAVCU5">
+        <!--MultiDisksStart-->
+            <a href="<!--MultiDisksUrl-->" class="Disk <!--MultiDisksNow--> astro-H4YAVCU5" aria-label="A disk">
+                <!--MultiDisksName-->
+            </a>
+        <!--MultiDisksEnd-->
+    </div>
+</div>
+<!--MultiDiskAreaEnd-->
+		<main>
+
+		    <!--HeadomfStart-->
+		        <div class="Contents">
+                    <div class="customfile" id="head-om">
+                        <!--HeadomfContent-->
                     </div>
-                </div>
-            </div>
-<!--HeadmdEnd-->
+		        </div>
+            <!--HeadomfEnd-->
 
-<!-- 加密文件夹 -->
-<!--EncryptedStart-->
-            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                加密文件夹
-            </div>
-            <div class="main-item-list" id="need—pw-div" style="padding: 50px 30px; font-size: larger; font-weight: bold;">
-                <center>
-                    <form action="" method="post">
-                    <input id="password1" name="password1" type="password" placeholder="请输入文件夹密码">
-                    <br>
-                    <input type="submit" value="确认">
-                    </form>
-                </center>
-            </div>
-<!--EncryptedEnd-->
-
-<!-- 游客上传 -->
-<!--GuestUploadStart-->
-            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                文件上传
-            </div>
-
-            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                <div id="upload_div">
-                    <div id="upload_btns" align="center">
-                        <select onchange="document.getElementById('upload_file').webkitdirectory=this.value;">
-                            <option value="">文件</option>
-                            <option value="1">文件夹</option>
-                        </select>
-                        <div id="upload_file_bu">上传文件<input id="upload_file" type="file" name="upload_filename" multiple="multiple"></div>
-                        <input id="upload_submit" onclick="preup();" value="上传" type="button">
+            <!--HeadmdStart-->
+		        <div class="Contents">
+                    <div class="markdown-body" id="head">
+                        <textarea id="head-md" style="display:none;"><!--HeadmdContent--></textarea>
                     </div>
+
+                    
                 </div>
-            </div>
-<!--GuestUploadEnd-->
+            <!--HeadmdEnd-->
+            
 
-<!-- 文件预览 -->
-<!--IsFileStart-->
-<!--IsimgFileStart-->
-            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                图片预览
-            </div>
-            <div class="main-item-list" id="imgFil-div" style="padding: 0;overflow: hidden;">
-                <img src="<!--FileDownUrl-->" alt="<!--FileName-->" onload="if (this.offsetWidth>document.getElementById('url').offsetWidth) this.style.width='100%';" />
-            </div>
-<!--IsimgFileEnd-->
 
-<!--IsvideoFileStart-->
-            <div class="main-item-list" id="videoFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                视频预览
-            </div>
-            <div class="main-item-list" id="videoFil-div" style="padding: 0;overflow: hidden;">
-                <div id="video-a0"></div>
-            </div>
-<!--IsvideoFileEnd-->
+            <div class="Contents">
+                <div>
+                    
+                    <div style="display: flex; align-items: center;">
+    <a class="UglyButton astro-5BUYZ7RE" href="<!--base_path-->" data-disabled="undefined">
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:home"><path d="M11.47 3.84a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.06l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 0 0 1.061 1.06l8.69-8.69z"/><path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.43z"/></svg>
+</a>
+    
+    <!--DiskPathArrayStart-->
+    
+    <span class="UglyIcon astro-27M7QWAL">
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:chevron-right"><path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5z" clip-rule="evenodd"/></svg>
+</span>
+    
+    <a class="UglyButton astro-5BUYZ7RE" href="<!--PathArrayLink-->" data-disabled="undefined">
+    
+        <!--PathArrayName-->
+    
+</a>
+    
+    <!--DiskPathArrayEnd-->
+</div>
 
-<!--IspdfFileStart-->
-            <div class="main-item-list" id="pdfFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                文档预览
-            </div>
-            <div class="main-item-list" id="pdfFil-div" style="padding: 20px;overflow: hidden;">
-                <div id="pdf-d">少女折寿中 ... ...</div>
-            </div>
-<!--IspdfFileEnd-->
+                    <div class="Divider astro-233M6D5J"></div>
 
-<!--IsmusicFileStart-->
-            <div class="main-item-list" id="musFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                音频预览
-            </div>
-            <div class="main-item-list" id="musFil-div" style="padding: 15px;overflow: hidden;">
-                <audio src="<!--FileDownUrl-->" controls="controls" style="width: 100%"></audio>
-            </div>
-<!--IsmusicFileEnd-->
+                    <h3><!--constStr@File--></h3>
 
-<!--IstxtFileStart-->
-            <div class="main-item-list" id="txtFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                文本预览
-            </div>
-            <div class="main-item-list" id="txtFil-div" style="padding: 20px;overflow: hidden;">
-                <textarea id="txt-a" name="editfile" readonly><!--TxtContent--></textarea>
-            </div>
-<!--IstxtFileEnd-->
-<!--IsFileEnd-->
+                    <!--IsFolderStart-->
+                        <div class="FolderDesc astro-QZ24M4LY" id="<!--FolderId-->">
+    <div class="FileName astro-QZ24M4LY">
+        <!--constStr@File-->
+    </div>
+    <div style="width: 20%;text-align: right;" class="EditTime astro-QZ24M4LY">
+        <!--constStr@EditTime-->
+    </div>
+    <div style="width: 20%;text-align: right;" class="Size astro-QZ24M4LY">
+        <!--constStr@Size-->
+    </div>
+</div>
 
-<!-- 文件下载 -->
-<!--IsFileStart-->
-            <div class="main-item-list" id="videoFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                文件下载
+<!--FolderListStart-->
+<div id="Folders" class="astro-QZ24M4LY">
+    <a class="UglyLink astro-ZMKMY7GO" href="<!--FileEncodeReplaceUrl-->/">
+    <div class="ListItems astro-QZ24M4LY">
+            <div data-FileId="<!--FileId-->" class="astro-QZ24M4LY">
+                <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-QZ24M4LY" astro-icon="heroicons:folder"><path d="M19.5 21a3 3 0 0 0 3-3v-4.5a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h15zm-18-10.854V6a3 3 0 0 1 3-3h5.379a2.25 2.25 0 0 1 1.59.659l2.122 2.121c.14.141.331.22.53.22H19.5a3 3 0 0 1 3 3v1.146A4.483 4.483 0 0 0 19.5 9h-15a4.483 4.483 0 0 0-3 1.146z"/></svg>
+                <!--FileEncodeReplaceName-->
             </div>
-            <div class="main-item-list">
-                <div id="download">
-                        <textarea id="url" title="url" rows="5" cols="33" readonly><!--FileEncodeUrl--></textarea>
-                        
-                        <div id="download_tip">拥有链接的人员都可查看.</div>
-                        <div id="download_bu">
-                            <button id="download_1" onclick="navigator.clipboard.writeText(document.querySelector('#url').innerHTML)">复制链接</button>
-                            <button id="download_2" onclick="window.location.href = '<!--FileEncodeUrl-->'">点击下载</button>
-                        </div>
-                </div>
+            <div class="astro-QZ24M4LY">
+                <!--lastModifiedDateTime-->
             </div>
-<!--IsFileEnd-->
+            <div class="astro-QZ24M4LY">
+                <!--size-->
+            </div>
+        </div>
+</a>
+</div>
+<!--FolderListEnd-->
 
+<!--FileListStart-->
+<div id="Files" class="astro-QZ24M4LY">
+    <a class="UglyLink astro-ZMKMY7GO" href="<!--FileEncodeReplaceUrl-->?preview">
+    <div class="ListItems astro-QZ24M4LY">
+            <div data-FileId="<!--FileId-->" class="astro-QZ24M4LY">
+                <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-QZ24M4LY" astro-icon="heroicons:document"><path d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625z"/><path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963z"/></svg>
+                <!--FileEncodeReplaceName-->
+            </div>
+            <div class="astro-QZ24M4LY">
+                <!--lastModifiedDateTime-->
+            </div>
+            <div class="astro-QZ24M4LY">
+                <!--size-->
+            </div>
+        </div>
+</a>
+</div>
+<!--FileListEnd-->
 <!-- 文件列表 -->
 <!--IsFolderStart-->
             <div class="main-item-list">
@@ -512,30 +279,268 @@
 <!--FileListEnd-->
             </div>
 <!--IsFolderEnd-->
-<!--ReadmemdStart-->
-            <div class="main-item-list" id="readme-div" style="padding: 20px;">
-                <div class="list-header-container">
-                    <div class="readme">
-                        <div class="markdown-body" id="readme">
-                            <textarea id="readme-md" style="display:none;"><!--ReadmemdContent--></textarea>
-                        </div>
+
+<!--MorePageStart-->
+<form class="MorePage astro-R62JC56R" action="" method="POST" id="nextpageform">
+    <input type="hidden" id="pagenum" name="pagenum" value="" class="astro-R62JC56R">
+
+    <div class="astro-R62JC56R">
+        <div class="astro-R62JC56R">
+            <!--PrePageStart-->
+            <a class="UglyButton astro-5BUYZ7RE" onclick="nextpage(<!--PrePageNum-->);" data-disabled="undefined">
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-R62JC56R" astro-icon="heroicons:arrow-left"><path fill-rule="evenodd" d="M11.03 3.97a.75.75 0 0 1 0 1.06l-6.22 6.22H21a.75.75 0 0 1 0 1.5H4.81l6.22 6.22a.75.75 0 1 1-1.06 1.06l-7.5-7.5a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 0 1 1.06 0z" clip-rule="evenodd"/></svg>
+</a>
+            <!--PrePageEnd-->
+        </div>
+        <div class="updated_at astro-R62JC56R">
+            <!--MorePageListStart-->
+                <a onclick="nextpage(<!--PageNum-->);" class="astro-R62JC56R"><!--PageNum--></a>
+            <!--MorePageListEnd-->
+            
+            <!--MorePageListNowStart-->
+                <a style="font-size: larger;" class="astro-R62JC56R"><!--PageNum--></a>
+            <!--MorePageListNowEnd-->
+    </div>
+        <div class="astro-R62JC56R">
+            <!--NextPageStart-->
+            <a class="UglyButton astro-5BUYZ7RE" onclick="nextpage(<!--NextPageNum-->);" data-disabled="undefined">
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-R62JC56R" astro-icon="heroicons:arrow-right"><path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06z" clip-rule="evenodd"/></svg>
+</a>
+            <!--NextPageEnd-->
+        </div>
+    </div>
+</form>
+
+
+<script>
+function nextpage(num) {
+    document.getElementById('pagenum').value=num;
+    document.getElementById('nextpageform').submit();
+}
+</script>
+<!--MorePageEnd-->
+                    <!--IsFolderEnd-->
+
+                    <!--IsFileStart-->
+                        <div style="text-align: center; width=90%;margin: 0 auto; padding: 15px 5px;">
+
+    <!--IsOtherFileStart-->
+    <p><!--constStr@FileNotSupport--></p>
+    <!--IsOtherFileEnd-->
+
+    <code id="url" title="url">
+        <!--FileEncodeUrl-->
+    </code>
+    <a class="UglyButton astro-5BUYZ7RE" href="<!--FileEncodeUrl-->" data-disabled="undefined">
+    <span><svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:arrow-down-tray"><path fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v11.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.22 3.22V3a.75.75 0 0 1 .75-.75zm-9 13.5a.75.75 0 0 1 .75.75v2.25a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V16.5a.75.75 0 0 1 1.5 0v2.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V16.5a.75.75 0 0 1 .75-.75z" clip-rule="evenodd"/></svg>&nbsp;<!--constStr@Download--></span>
+</a>
+    <a class="UglyButton astro-5BUYZ7RE" href="<!--FileEncodeUrl-->" data-disabled="undefined">
+    <span><svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:document-duplicate"><path d="M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.161 14.34 9 15.375 9h1.875A3.75 3.75 0 0 1 21 12.75v3.375C21 17.16 20.16 18 19.125 18h-9.75A1.875 1.875 0 0 1 7.5 16.125V3.375z"/><path d="M15 5.25a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 17.25 7.5h-1.875A.375.375 0 0 1 15 7.125V5.25zM4.875 6H6v10.125A3.375 3.375 0 0 0 9.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V7.875C3 6.839 3.84 6 4.875 6z"/></svg>&nbsp;Copy URL</span>
+</a>
+    <script>
+        var $url = document.getElementById("url");
+        if ($url) {
+            $url.innerHTML = location.href.replace(/\?preview$/gi, "").replace(/&amp;/g, "&amp;amp;");
+        }
+    </script>
+
+<!-- 加密文件夹 -->
+<!--EncryptedStart-->
+            <div class="Contents" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                加密文件夹
+            </div>
+            <div class="Contents" id="need—pw-div" style="padding: 50px 30px; font-size: larger; font-weight: bold;">
+                <center>
+                    <form action="" method="post">
+                    <input class="code" id="password1" name="password1" type="password" placeholder="请输入文件夹密码">
+                    <br>
+                    <input class="UglyButton astro-5BUYZ7RE" type="submit" value="确认">
+                    </form>
+                </center>
+            </div>
+<!--EncryptedEnd-->
+
+<!-- 游客上传 -->
+<!--GuestUploadStart-->
+            <div class="Contents" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                文件上传
+            </div>
+
+            <div class="Contents" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                <div id="upload_div">
+                                        <div class="Contents" id="upload_file_bu">上传文件<input class="Contents" id="upload_file" type="file" name="upload_filename" multiple="multiple"></div>
+                    <div id="upload_btns" align="center">
+                        <select class="UglyButton astro-5BUYZ7RE" onchange="document.getElementById('upload_file').webkitdirectory=this.value;">
+                            <option value="">文件</option>
+                            <option value="1">文件夹</option>
+                        </select>
+
+                        <input class="UglyButton astro-5BUYZ7RE" id="upload_submit" onclick="preup();" value="上传" type="button">
                     </div>
                 </div>
             </div>
-<!--ReadmemdEnd-->
-            <div style="text-align: center; margin-top: 100px;">
-                <div id="foot_info">
+<!--GuestUploadEnd-->
+
+    <!--IstxtFileStart-->
+        <textarea class="code" id="txt-render" readonly>            <!--TxtContent-->
+        </textarea>
+        <script>
+            document.getElementById("txt-render").style.height = $textarea.scrollHeight + "px";
+        </script>
+    <!--IstxtFileEnd-->
+
+
+    <!--IsimgFileStart-->
+    <br>
+    <img src="<!--FileEncodeUrl-->" alt="<!--FileName-->" style="margin: 10px 0;" onload="
+            if (this.offsetWidth>document.getElementById('url').offsetWidth) this.style.width='100%';
+            if (this.offsetHeight>document.documentElement.clientHeight) this.style.height=document.documentElement.clientHeight + 'px';
+        ">
+    <!--IsimgFileEnd-->
+
+
+    <!--IsvideoFileStart-->
+        <div id="dplayer-video" style="margin: 10px 0;" data-src="<!--FileEncodeUrl-->"></div>
+        <script src="https://charo.koto.cc/aom-assets/DPlayer/DPlayer.min.js"></script>
+        <script>
+            const DPlayerObject = new DPlayer({
+                container: document.getElementById("dplayer-video"),
+                video: {
+                    url: document.getElementById("dplayer-video").getAttribute("data-src"),
+                },
+            });
+
+        </script>
+    <!--IsvideoFileEnd-->
+
+
+    <!--IsmusicFileStart-->
+        <audio src="<!--FileDownUrl-->" controls="controls" style="width: 100%;margin: 10px 0;"></audio>
+    <!--IsmusicFileEnd-->
+
+
+    <!--IsofficeFileStart-->
+        <iframe style="margin: 10px 0; border: none; width: 100%; height: 800px" id="office-render" src="https://view.officeapps.live.com/op/view.aspx?src=<!--FileEncodeDownUrl-->"></iframe>
+    <!--IsofficeFileEnd-->
+
+
+
+    <!--IspdfFileStart-->
+        <div id="pdf-render">Loading PDF</div>
+        <script src="https://charo.koto.cc/aom-assets/PDF/pdf.min.js"></script>
+        <script>
+            pdfjsLib.GlobalWorkerOptions.workerSrc = "https://charo.koto.cc/aom-assets/PDF/pdf.worker.min.js";
+            var loadingTask = pdfjsLib.getDocument({
+                url: "<!--FileDownUrl-->",
+                disableStream: true,
+                disableAutoFetch: true,
+                rangeChunkSize: 65535
+            });
+            loadingTask.promise.then(function(pdf) {
+                var pdfContainer = document.getElementById('pdf-render');
+                pdfContainer.innerHTML = '';
+                var pagenum =  pdf.numPages;
+                var pagepos = 1;
+                var pdfnextpagebutton = document.createElement('button');
+                pdfnextpagebutton.id = 'pdfnextpagebutton';
+                pdfnextpagebutton.innerText = 'Load page ' + pagepos + '-' + (pagepos+4<pagenum?pagepos+4:pagenum) + ' (' + pagenum + ')';
+                pdfnextpagebutton.setAttribute('onclick', "this.style.display = 'none';");
+                pdfnextpagebutton.style.display = 'none';
+                pdfContainer.appendChild(pdfnextpagebutton);
+                var pdfWaitNextPage = setInterval(function(){
+                    if (pdfnextpagebutton.style.display==='none') {
+                        for (var i=pagepos;i<=(pagepos+4<pagenum?pagepos+4:pagenum);i++) {
+                            var canvasNew = document.createElement('canvas');
+                            canvasNew.id = 'pdf-c'+i;
+                            pdfContainer.appendChild(canvasNew);
+                            renderpage(pdf,i);
+                        }
+                        pagepos = i;
+                        if (pagepos<pagenum) {
+                            console.log("next page: " + pagepos + " / " + pagenum);
+                            pdfnextpagebutton.innerText = 'Load page ' + pagepos + '-' + (pagepos+4<pagenum?pagepos+4:pagenum) + ' (' + pagenum + ')';
+                            pdfnextpagebutton.style.display ='';
+                            pdfContainer.appendChild(pdfnextpagebutton);
+                        } else {
+                            console.log("end of pdf");
+                            clearInterval(pdfWaitNextPage);
+                        }
+                    }
+                }, 1000);
+            });
+            function renderpage(pdf,i) {
+                pdf.getPage(i).then(function(page) { 
+                    var scale = 1.5;
+                    var viewport = page.getViewport({ scale: scale, });
+                    var canvas = document.getElementById('pdf-c'+i);
+                    var context = canvas.getContext("2d");
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+                    var renderContext = {
+                        canvasContext: context,
+                        viewport: viewport,
+                    };
+                    page.render(renderContext);
+                });
+            }
+        </script>
+    <!--IspdfFileEnd-->
+
+</div>
+
+<style>
+    #pdf-render {
+        box-sizing: border-box;
+        max-width: 100%;
+        height: 75vh;
+        overflow: auto;
+    }
+    #pdf-render canvas {
+        width: 100%;
+    }
+</style>
+                    <!--IsFileEnd-->
+
                 </div>
-                <script>
-                    let year = new Date().getFullYear()
-                    document.querySelector("#foot_info").innerHTML='Copyright © ' + year + ' | Powered by <a href="https://github.com/qkqpttgf/OneManager-php/">Onemanager</a> |   <a href="https://github.com/lswlc33/Onemanager_theme_new_onedrive/">Theme</a> by <a href="https://github.com/lswlc33/">雪中明月</a>'
-                </script>
             </div>
-        </div>
-<!--ListEnd-->
+            
 
 
+            <!--ReadmemdStart-->
+		        <div class="Contents">
+                    <div class="markdown-body" id="readme">
+                        <textarea id="readme-md" style="display:none;"><!--ReadmemdContent--></textarea>
+                    </div>
 
+                    
+                </div>
+            <!--ReadmemdEnd-->
+            <!--FootomfStart-->
+		        <div class="Contents">
+                    <div class="customfile" id="foot-om">
+                        <!--FootomfContent-->
+                    </div>
+		        </div>
+            <!--FootomfEnd-->
+		</main>
+        <div class="astro-55HNOTDJ">
+    <p style="font-size: larger;" class="astro-55HNOTDJ"></p>
+    <p class="astro-55HNOTDJ">
+        Powered by
+        <a href="https://astro.build/" class="astro-55HNOTDJ">INJU银烛</a>&nbsp;|&nbsp;
+        Theme for
+        <a href="https://github.com/qkqpttgf/OneManager-php" class="astro-55HNOTDJ">Onemanager</a>&nbsp;|&nbsp;
+        Under AGPL-3.0
+    </p>
+    <p class="astro-55HNOTDJ">
+        <a href="https://github.com/kobe-koto/Onemanager-Theme-Charo" class="astro-55HNOTDJ">Theme Charo</a>
+        by
+        <a href="https://github.com/kobe-koto" class="astro-55HNOTDJ">kobe-koto</a>
+        , And INJU.
+    </p>
+</div>
+	</body>
+	
 	<!-- 文件上传相关 -->
     <script>
         <!--UploadJsStart-->
@@ -1183,12 +1188,6 @@
     }
 <!--AliyundriveUploadJsEnd-->
     </script>
-
-
-
-	</body>
-	
-
 	
 	
 	<!--customScript--></html><!--IconValuesStart--><!--
