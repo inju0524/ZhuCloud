@@ -18,7 +18,72 @@
 
         <!--customCss-->
 	<link rel="stylesheet" href="https://charo.koto.cc/aom-assets/_astro/allinone.43fc9617.css" />
-<link rel="stylesheet" href="https://charo.koto.cc/aom-assets/_astro/allinone.11a782e3.css" /><script type="module" src="https://charo.koto.cc/aom-assets/_astro/hoisted.d9ceb923.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/s.6.14.1.min.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/MultiDisk-legacy.a36c04d2.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/hoisted-legacy.dc9c781c.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/hoisted-legacy.fd96d87d.js"></script></head>
+<link rel="stylesheet" href="https://charo.koto.cc/aom-assets/_astro/allinone.11a782e3.css" /><script type="module" src="https://charo.koto.cc/aom-assets/_astro/hoisted.d9ceb923.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/s.6.14.1.min.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/MultiDisk-legacy.a36c04d2.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/hoisted-legacy.dc9c781c.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/hoisted-legacy.fd96d87d.js"></script>
+
+<style>
+        
+#upload_file_bu:active{transform: scale(1.01);}
+        #upload_file{
+            
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+                display: inline-block;
+
+            
+            
+        }
+        #upload_file:not([data-disabled="true"]):hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: #6a6a6a 1spx 1px 20px;
+}
+        #upload_file_bu{
+  
+    
+
+    width: aoto;
+    -webkit-transition: all .35s ease-in-out;
+    -webkit-transition: all .35s ease;
+    transition: all .35s ease;
+    background-color: #80808080;
+    border-radius: 16px;
+    padding: 10px 12px;
+    min-width: 0;
+    min-height: 40px;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    appearance: auto;
+    user-select: none;
+    white-space-collapse: preserve;
+    text-wrap: nowrap;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    color: buttontext;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+    background-color: #80808080;
+        }
+        #upload_btns{
+
+        }
+</style>
+
+</head>
 	<body>
 		<header>
 	<span class="left">
@@ -94,6 +159,29 @@
                     
                 </div>
             <!--HeadmdEnd-->
+            
+                <!--云盘切换Start-->
+		        <div class="Contents">
+                    <div class="markdown-body" >
+                        云盘切换功能，敬请期待！
+                    </div>
+<!--MultiDiskAreaStart-->
+    <div class="list-wrapper" id="more-disk-div">
+        <div class="list-container">
+            <div class="list-header-container">
+                <div class="more-disk">
+<!--MultiDisksStart-->
+                    <a class="UglyButton astro-5BUYZ7RE" href="<!--MultiDisksUrl-->" <!--MultiDisksNow-->><!--MultiDisksName--></a>
+<!--MultiDisksEnd-->
+                </div>
+            </div>
+        </div>
+    </div>
+<!--MultiDiskAreaEnd-->
+
+                    
+                </div>
+            <!--云盘切换End-->
 
             <div class="Contents">
                 <div>
@@ -237,6 +325,42 @@ function nextpage(num) {
         }
     </script>
 
+<!-- 加密文件夹 -->
+<!--EncryptedStart-->
+            <div class="Contents" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                加密文件夹
+            </div>
+            <div class="Contents" id="need—pw-div" style="padding: 50px 30px; font-size: larger; font-weight: bold;">
+                <center>
+                    <form action="" method="post">
+                    <input class="code" id="password1" name="password1" type="password" placeholder="请输入文件夹密码">
+                    <br>
+                    <input class="UglyButton astro-5BUYZ7RE" type="submit" value="确认">
+                    </form>
+                </center>
+            </div>
+<!--EncryptedEnd-->
+
+<!-- 游客上传 -->
+<!--GuestUploadStart-->
+            <div class="Contents" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                文件上传
+            </div>
+
+            <div class="Contents" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                <div id="upload_div">
+                                        <div class="Contents" id="upload_file_bu">上传文件<input class="Contents" id="upload_file" type="file" name="upload_filename" multiple="multiple"></div>
+                    <div id="upload_btns" align="center">
+                        <select class="UglyButton astro-5BUYZ7RE" onchange="document.getElementById('upload_file').webkitdirectory=this.value;">
+                            <option value="">文件</option>
+                            <option value="1">文件夹</option>
+                        </select>
+
+                        <input class="UglyButton astro-5BUYZ7RE" id="upload_submit" onclick="preup();" value="上传" type="button">
+                    </div>
+                </div>
+            </div>
+<!--GuestUploadEnd-->
 
     <!--IstxtFileStart-->
         <textarea class="code" id="txt-render" readonly>            <!--TxtContent-->
