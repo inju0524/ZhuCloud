@@ -87,8 +87,7 @@
 
 </head>
 	<body>
-	  
-    		<header>
+		<header>
 	<span class="left">
 	<span onclick="SideBar.Open()" title="Open Sidebar.">
 			<svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:bars-3"><path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75zM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75z" clip-rule="evenodd"/></svg>
@@ -143,29 +142,6 @@
 </div>
 <!--MultiDiskAreaEnd-->
 		<main>
-		
-		
-		<!-- 游客上传 -->
-<!--GuestUploadStart-->
-            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                文件上传
-            </div>
-
-            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                <div id="upload_div">
-                    <div id="upload_btns" align="center">
-                        <select onchange="document.getElementById('upload_file').webkitdirectory=this.value;">
-                            <option value="">文件</option>
-                            <option value="1">文件夹</option>
-                        </select>
-                        <div id="upload_file_bu">上传文件<input id="upload_file" type="file" name="upload_filename" multiple="multiple"></div>
-                        <input id="upload_submit" onclick="preup();" value="上传" type="button">
-                    </div>
-                </div>
-            </div>
-<!--GuestUploadEnd-->
-
-		
 
 		    <!--HeadomfStart-->
 		        <div class="Contents">
@@ -226,6 +202,43 @@
         <!--constStr@Size-->
     </div>
 </div>
+
+<!-- 加密文件夹 -->
+<!--EncryptedStart-->
+            <div class="Contents" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                加密文件夹
+            </div>
+            <div class="Contents" id="need—pw-div" style="padding: 50px 30px; font-size: larger; font-weight: bold;">
+                <center>
+                    <form action="" method="post">
+                    <input class="code" id="password1" name="password1" type="password" placeholder="请输入文件夹密码">
+                    <br>
+                    <input class="UglyButton astro-5BUYZ7RE" type="submit" value="确认">
+                    </form>
+                </center>
+            </div>
+<!--EncryptedEnd-->
+
+<!-- 游客上传 -->
+<!--GuestUploadStart-->
+            <div class="Contents" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                文件上传
+            </div>
+
+            <div class="Contents" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                <div id="upload_div">
+                                        <div class="Contents" id="upload_file_bu">上传文件<input class="Contents" id="upload_file" type="file" name="upload_filename" multiple="multiple"></div>
+                    <div id="upload_btns" align="center">
+                        <select class="UglyButton astro-5BUYZ7RE" onchange="document.getElementById('upload_file').webkitdirectory=this.value;">
+                            <option value="">文件</option>
+                            <option value="1">文件夹</option>
+                        </select>
+
+                        <input class="UglyButton astro-5BUYZ7RE" id="upload_submit" onclick="preup();" value="上传" type="button">
+                    </div>
+                </div>
+            </div>
+<!--GuestUploadEnd-->
 
 <!--FolderListStart-->
 <div id="Folders" class="astro-QZ24M4LY">
@@ -331,25 +344,167 @@ function nextpage(num) {
 
 
 
+    <!--IstxtFileStart-->
+        <textarea class="code" id="txt-render" readonly>            <!--TxtContent-->
+        </textarea>
+        <script>
+            document.getElementById("txt-render").style.height = $textarea.scrollHeight + "px";
+        </script>
+    <!--IstxtFileEnd-->
+
+
+    <!--IsimgFileStart-->
+    <br>
+    <img src="<!--FileEncodeUrl-->" alt="<!--FileName-->" style="margin: 10px 0;" onload="
+            if (this.offsetWidth>document.getElementById('url').offsetWidth) this.style.width='100%';
+            if (this.offsetHeight>document.documentElement.clientHeight) this.style.height=document.documentElement.clientHeight + 'px';
+        ">
+    <!--IsimgFileEnd-->
+
+
+    <!--IsvideoFileStart-->
+        <div id="dplayer-video" style="margin: 10px 0;" data-src="<!--FileEncodeUrl-->"></div>
+        <script src="https://charo.koto.cc/aom-assets/DPlayer/DPlayer.min.js"></script>
+        <script>
+            const DPlayerObject = new DPlayer({
+                container: document.getElementById("dplayer-video"),
+                video: {
+                    url: document.getElementById("dplayer-video").getAttribute("data-src"),
+                },
+            });
+
+        </script>
+    <!--IsvideoFileEnd-->
+
+
+    <!--IsmusicFileStart-->
+        <audio src="<!--FileDownUrl-->" controls="controls" style="width: 100%;margin: 10px 0;"></audio>
+    <!--IsmusicFileEnd-->
+
+
+    <!--IsofficeFileStart-->
+        <iframe style="margin: 10px 0; border: none; width: 100%; height: 800px" id="office-render" src="https://view.officeapps.live.com/op/view.aspx?src=<!--FileEncodeDownUrl-->"></iframe>
+    <!--IsofficeFileEnd-->
 
 
 
+    <!--IspdfFileStart-->
+        <div id="pdf-render">Loading PDF</div>
+        <script src="https://charo.koto.cc/aom-assets/PDF/pdf.min.js"></script>
+        <script>
+            pdfjsLib.GlobalWorkerOptions.workerSrc = "https://charo.koto.cc/aom-assets/PDF/pdf.worker.min.js";
+            var loadingTask = pdfjsLib.getDocument({
+                url: "<!--FileDownUrl-->",
+                disableStream: true,
+                disableAutoFetch: true,
+                rangeChunkSize: 65535
+            });
+            loadingTask.promise.then(function(pdf) {
+                var pdfContainer = document.getElementById('pdf-render');
+                pdfContainer.innerHTML = '';
+                var pagenum =  pdf.numPages;
+                var pagepos = 1;
+                var pdfnextpagebutton = document.createElement('button');
+                pdfnextpagebutton.id = 'pdfnextpagebutton';
+                pdfnextpagebutton.innerText = 'Load page ' + pagepos + '-' + (pagepos+4<pagenum?pagepos+4:pagenum) + ' (' + pagenum + ')';
+                pdfnextpagebutton.setAttribute('onclick', "this.style.display = 'none';");
+                pdfnextpagebutton.style.display = 'none';
+                pdfContainer.appendChild(pdfnextpagebutton);
+                var pdfWaitNextPage = setInterval(function(){
+                    if (pdfnextpagebutton.style.display==='none') {
+                        for (var i=pagepos;i<=(pagepos+4<pagenum?pagepos+4:pagenum);i++) {
+                            var canvasNew = document.createElement('canvas');
+                            canvasNew.id = 'pdf-c'+i;
+                            pdfContainer.appendChild(canvasNew);
+                            renderpage(pdf,i);
+                        }
+                        pagepos = i;
+                        if (pagepos<pagenum) {
+                            console.log("next page: " + pagepos + " / " + pagenum);
+                            pdfnextpagebutton.innerText = 'Load page ' + pagepos + '-' + (pagepos+4<pagenum?pagepos+4:pagenum) + ' (' + pagenum + ')';
+                            pdfnextpagebutton.style.display ='';
+                            pdfContainer.appendChild(pdfnextpagebutton);
+                        } else {
+                            console.log("end of pdf");
+                            clearInterval(pdfWaitNextPage);
+                        }
+                    }
+                }, 1000);
+            });
+            function renderpage(pdf,i) {
+                pdf.getPage(i).then(function(page) { 
+                    var scale = 1.5;
+                    var viewport = page.getViewport({ scale: scale, });
+                    var canvas = document.getElementById('pdf-c'+i);
+                    var context = canvas.getContext("2d");
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+                    var renderContext = {
+                        canvasContext: context,
+                        viewport: viewport,
+                    };
+                    page.render(renderContext);
+                });
+            }
+        </script>
+    <!--IspdfFileEnd-->
+
+</div>
+
+<style>
+    #pdf-render {
+        box-sizing: border-box;
+        max-width: 100%;
+        height: 75vh;
+        overflow: auto;
+    }
+    #pdf-render canvas {
+        width: 100%;
+    }
+</style>
+                    <!--IsFileEnd-->
+
+                </div>
+            </div>
+            
 
 
+            <!--ReadmemdStart-->
+		        <div class="Contents">
+                    <div class="markdown-body" id="readme">
+                        <textarea id="readme-md" style="display:none;"><!--ReadmemdContent--></textarea>
+                    </div>
 
-
-
-
-    </main>
-
-<!-- 下面是js脚本 -->
-    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-
-// 文件预览相关
-
-
-
-<!-- 文件上传相关 -->
+                    
+                </div>
+            <!--ReadmemdEnd-->
+            <!--FootomfStart-->
+		        <div class="Contents">
+                    <div class="customfile" id="foot-om">
+                        <!--FootomfContent-->
+                    </div>
+		        </div>
+            <!--FootomfEnd-->
+		</main>
+        <div class="astro-55HNOTDJ">
+    <p style="font-size: larger;" class="astro-55HNOTDJ"></p>
+    <p class="astro-55HNOTDJ">
+        Powered by
+        <a href="https://astro.build/" class="astro-55HNOTDJ">INJU银烛</a>&nbsp;|&nbsp;
+        Theme for
+        <a href="https://github.com/qkqpttgf/OneManager-php" class="astro-55HNOTDJ">Onemanager</a>&nbsp;|&nbsp;
+        Under AGPL-3.0
+    </p>
+    <p class="astro-55HNOTDJ">
+        <a href="https://github.com/kobe-koto/Onemanager-Theme-Charo" class="astro-55HNOTDJ">Theme Charo</a>
+        by
+        <a href="https://github.com/kobe-koto" class="astro-55HNOTDJ">kobe-koto</a>
+        , And INJU.
+    </p>
+</div>
+	</body>
+	
+	<!-- 文件上传相关 -->
     <script>
         <!--UploadJsStart-->
     function size_format(num) {
@@ -996,9 +1151,6 @@ function nextpage(num) {
     }
 <!--AliyundriveUploadJsEnd-->
     </script>
-	</body>
-	
-
 	
 	
 	<!--customScript--></html><!--IconValuesStart--><!--
