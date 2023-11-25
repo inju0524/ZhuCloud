@@ -26,67 +26,308 @@
 <link rel="stylesheet" href="https://charo.koto.cc/aom-assets/_astro/allinone.11a782e3.css" /><script type="module" src="https://charo.koto.cc/aom-assets/_astro/hoisted.d9ceb923.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/s.6.14.1.min.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/MultiDisk-legacy.a36c04d2.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/hoisted-legacy.dc9c781c.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/hoisted-legacy.fd96d87d.js"></script>
 
 <style>
+
+
+        /* main */
+        main { 
+            position: relative;
+            height: 100%;
+            background: #f0f0f4;
+            <!--BackgroundStart-->background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-image:url("<!--BackgroundUrl-->");<!--BackgroundEnd-->
+            <!--BackgroundMStart-->background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-image:url("<!--BackgroundMUrl-->");}<!--BackgroundMEnd-->
+        }
+
+
+        main .scroll {
+            position: absolute;
+        }
+        .scroll {
+            overflow-y: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 48px 0 100px 0;
+        }
         
-#upload_file_bu:active{transform: scale(1.01);}
+        main .main-item-list {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            background: rgba(255,255,255,0.8);
+            margin: 20px;
+            line-height: 32px;
+            font-size: 14px;
+            box-sizing: border-box;
+            border-radius: 12px;
+            border: #e0e0e0 solid 1px;
+            padding: 12px 0;
+            backdrop-filter: blur(20px);
+        }
+        main .main-title h1 {
+            margin: 0;
+            padding: 32px 32px 10px 32px;
+            font-size: 19px;
+            font-weight: 600;
+        }
+        div.main-title > h1 > a:last-of-type {
+            font-weight: 600;
+            color: rgb(36, 36, 36);
+        }
+
+
+        main .main-items:hover { 
+            background-color: #F4F4F4;
+            transform: scale(0.980);
+            border-radius: 10px;
+        }
+        main .main-item-list .inner-container {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+
+        }
+        main .main-item-list .inner-container > div {
+            padding-left: 12px;
+            padding-right: 8px;
+            box-sizing: border-box;
+            text-wrap: nowrap;
+            font-weight: 600;
+        }
+        div.main-items.main-item-title > div > div.main-items-icon {
+            display: none;
+        }
+        main .main-item-list .main-item-title { 
+            border-bottom: 1px solid #EAEAEA;
+        }
+        main .main-item-list .main-items-radio-box {
+            width: 48px;
+            height: 32px;
+            line-height: 40px;
+            text-align: center;
+        }
+        main .main-item-list .main-items-radio-box .main-items-radio {
+            display: none;
+            width: 18px;
+            height: 18px;
+        }
+        main .main-item-list .main-items-radio-box .main-items-radio[currstatus=true] {
+            display: block;
+        }
+        main .main-item-list .main-items-icon {
+            min-width: 38px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+        }
+        main .main-item-title .main-items-icon {
+            height: 32px!important;
+            line-height: 9px!important;
+        }
+        main .main-item-title .main-items-icon:hover,
+        main .main-item-list .main-items-displayName:hover,
+        main .main-item-list .main-items-dateModified:hover,
+        main .main-item-list .main-items-size:hover { 
+            background-color: #EAEAEA; 
+        }
+        main .main-item-list .main-items-icon .iconfont {
+            font-size: 20px;
+        }
+        main .main-item-list .main-items-icon img {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+        }
+        main .main-items {
+            display: flex;
+            justify-content: flex-start;
+            box-sizing: border-box;
+            padding: 0 20px;
+            overflow: hidden;
+            transition: 0.5s;
+            margin-top: 2.5px;
+            margin-bottom: 2.5px;
+        }
+        main .main-item-list .main-items-displayName,
+        main .main-item-list .main-items-fileName { 
+            width: 520px;
+        }
+        main .main-item-list .main-items-dateModified,
+        main .main-item-list .main-items-dateTime { 
+            width: 250px; 
+        }
+        main .main-item-list .main-items-size,
+        main .main-item-list .main-items-fileSize { 
+            width: 180px;
+        }
+        main .main-item-list .main-items-radio-box,
+        main .main-item-list .main-items-icon,
+        main .main-item-list .main-items-fileName,
+        main .main-item-list .main-items-dateTime,
+        main .main-item-list .main-items-fileSize {
+            padding: 11px 8px 11px 12px;
+            height: 42px;
+            line-height: 22px;
+            font-family: "Microsoft Yahei UI", Verdana, Simsun, "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
+            white-space: nowrap;
+            /* text-overflow: ellipsis; */
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        main .main-item-list .main-items-radio-box,
+        main .main-item-list .main-items-icon {
+            overflow: initial;
+        }
+
+        main .main-item-list .main-items-fileName a {
+            color: inherit;
+        }
+        main .main-item-list .main-items-fileName a:hover {
+            text-decoration: underline;
+        }
+        .more-disk{
+            vertical-align: middle;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            max-width: 100px;
+        }
+        .more-disk div{
+            list-style:none;
+            position:absolute;
+            display:none;background:#ffffff;border-radius:5px;margin:0 0 0 -10px;/*padding:0 7px;*/color:#205D67;z-index:1;
+            box-shadow: 0 0.5em 3em rgba(161,177,204,.4);
+        }
+        .more-disk:hover div{display:block}
+        .more-disk div li{line-height:normal;padding: 3px 10px;}
+        .more-disk div li a{text-decoration: none; color:rgba(0,0,0,.3);}
+        .more-disk div li a:hover{color:rgba(0,0,0,.87);}
+        .more-disk div li a[now]{color:rgba(0,0,0,1);}
+
+        #download{
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px 10px 20px;
+        }
+
+        #download_bu{
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #download_bu button{
+            width: auto;
+            font-size: 15px;
+            margin-left: 20px;
+            border-radius: 8px;
+            border: 2px solid #0078d4;
+            padding: 6px 20px 6px 20px;
+            transition: 0.5s;
+        }
+
+        #download_bu button:active{transform: scale(0.9);}
+        #download_1{background: white;color: #0078d4;}
+        #download_2{background: #0078d4; color: white;}
+        #download_1:hover{background: rgb(233, 233, 233);}
+        #download_2:hover{background: #006cbe;}
+
+        textarea{
+            padding: 10px;
+            resize: none;
+            border: 1px solid #c8c6c4;
+            border-bottom: 2px solid #3b3a39;
+            border-radius: 8px;
+            outline: none;
+            overflow: hidden;
+            transition: 0.5s;
+            font-family: "Microsoft Yahei UI", Verdana, Simsun, "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
+        }
+        textarea:hover{border-bottom: 2px solid #0078d4;}
+
+        #pdf-d {display: flex;flex-direction: column;}
+
+        .scroll::-webkit-scrollbar {width: 5px;}
+        .scroll::-webkit-scrollbar-thumb {background: #a8a8a8;}
+        .scroll::-webkit-scrollbar-button {display: none;}
+
+        #upload_div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .list-table {margin-top: 20px;}
+
+        #upload_div select,
+        #upload_div input,
+        #upload_div div{
+            font-size: 15px;
+            transition: 0.5s;
+            border-radius: 8px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        #upload_div select{
+            border: 2px solid #c7c7c7;
+            padding: 10px 10px 6px 20px;
+            outline: none;
+        }
+        #upload_div select:hover{border: 2px solid #0078d4;}
+        #upload_submit{
+            border: 2px solid #0078d4;
+            padding: 6px 40px 6px 40px;
+            background-color: #0078d4;
+            color: #ffffff;
+        }
+        #upload_submit:hover{background: #006cbe;}
+        #upload_submit:active,#upload_file_bu:active{transform: scale(0.9);}
         #upload_file{
-            
             opacity: 0;
             position: absolute;
             width: 100%;
             height: 100%;
             left: 0;
             top: 0;
-                display: inline-block;
-
-            
             
         }
-        #upload_file:not([data-disabled="true"]):hover {
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
-    box-shadow: #6a6a6a 1spx 1px 20px;
-}
         #upload_file_bu{
-  
-    
-
-    width: aoto;
-    -webkit-transition: all .35s ease-in-out;
-    -webkit-transition: all .35s ease;
-    transition: all .35s ease;
-    background-color: #80808080;
-    border-radius: 16px;
-    padding: 10px 12px;
-    min-width: 0;
-    min-height: 40px;
-    box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    appearance: auto;
-    user-select: none;
-    white-space-collapse: preserve;
-    text-wrap: nowrap;
-    align-items: flex-start;
-    text-align: center;
-    cursor: default;
-    box-sizing: border-box;
-    background-color: buttonface;
-    color: buttontext;
-    padding-block: 1px;
-    padding-inline: 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonborder;
-    border-image: initial;
-    background-color: #80808080;
+            border: 2px solid #0078d4;
+            background-color: #ffffff;
+            font-weight: 400;
+            color: #0078d4;
+            position: relative;
+            padding: 6px 20px 6px 20px;
+            text-align: center;
         }
         #upload_btns{
-
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+            flex-wrap: wrap;
         }
-</style>
+
+        #need—pw-div input{
+            border: 1px solid #0078d4;
+            font-size: 16px;
+            background-color: #0078d4;
+            outline: none;
+            border-radius: 8px;
+            color: white;
+            padding: 10px 20px 10px 20px;
+        }
+        input#password1{
+            border: 2px solid #0078d4;
+            background-color: white;
+            padding: 10px 10px 10px 10px;
+            margin-bottom: 40px;
+            color: #000;
+        }
+   </style>
 
 </head>
 	<body>
@@ -134,16 +375,17 @@
 </header>
 
 <!--MultiDiskAreaStart-->
+<!--
 <div class="MultiDiskContainer hidden astro-H4YAVCU5" id="more-disk-div">
     <div class="MultiDisk astro-H4YAVCU5">
-        <!--MultiDisksStart-->
-            <a href="<!--MultiDisksUrl-->" class="Disk <!--MultiDisksNow--> astro-H4YAVCU5" aria-label="A disk">
-                <!--MultiDisksName-->
+        <!--MultiDisksStart--/>
+            <a href="<!--MultiDisksUrl--/>" class="Disk <!--MultiDisksNow--/> astro-H4YAVCU5" aria-label="A disk">
+                <!--MultiDisksName--/>
             </a>
-        <!--MultiDisksEnd-->
+        <!--MultiDisksEnd--/>
     </div>
 </div>
-<!--MultiDiskAreaEnd-->
+<!--MultiDiskAreaEnd--/>-->
 		<main>
 
 		    <!--HeadomfStart-->
