@@ -113,22 +113,10 @@
                 </h1>
             </div>
 
-<!--HeadmdStart-->
-            <div class="main-item-list" id="head-div">
-                <div class="list-container" style="padding: 20px;">
-                    <div class="list-header-container">
-                        <div class="readme">
-                            <div class="markdown-body" id="head">
-                                <textarea id="head-md" style="display:none;"><!--HeadmdContent--></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!--HeadmdEnd-->
+
 
 <!-- 加密文件夹 -->
-<!--EncryptedStart-->
+<!--EncryptedStart--/>
             <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
                 加密文件夹
             </div>
@@ -163,71 +151,9 @@
             </div>
 <!--GuestUploadEnd-->
 
-<!-- 文件预览 -->
-<!--IsFileStart-->
-<!--IsimgFileStart-->
-            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                图片预览
-            </div>
-            <div class="main-item-list" id="imgFil-div" style="padding: 0;overflow: hidden;">
-                <img src="<!--FileDownUrl-->" alt="<!--FileName-->" onload="if (this.offsetWidth>document.getElementById('url').offsetWidth) this.style.width='100%';" />
-            </div>
-<!--IsimgFileEnd-->
 
-<!--IsvideoFileStart-->
-            <div class="main-item-list" id="videoFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                视频预览
-            </div>
-            <div class="main-item-list" id="videoFil-div" style="padding: 0;overflow: hidden;">
-                <div id="video-a0"></div>
-            </div>
-<!--IsvideoFileEnd-->
 
-<!--IspdfFileStart-->
-            <div class="main-item-list" id="pdfFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                文档预览
-            </div>
-            <div class="main-item-list" id="pdfFil-div" style="padding: 20px;overflow: hidden;">
-                <div id="pdf-d">少女折寿中 ... ...</div>
-            </div>
-<!--IspdfFileEnd-->
 
-<!--IsmusicFileStart-->
-            <div class="main-item-list" id="musFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                音频预览
-            </div>
-            <div class="main-item-list" id="musFil-div" style="padding: 15px;overflow: hidden;">
-                <audio src="<!--FileDownUrl-->" controls="controls" style="width: 100%"></audio>
-            </div>
-<!--IsmusicFileEnd-->
-
-<!--IstxtFileStart-->
-            <div class="main-item-list" id="txtFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                文本预览
-            </div>
-            <div class="main-item-list" id="txtFil-div" style="padding: 20px;overflow: hidden;">
-                <textarea id="txt-a" name="editfile" readonly><!--TxtContent--></textarea>
-            </div>
-<!--IstxtFileEnd-->
-<!--IsFileEnd-->
-
-<!-- 文件下载 -->
-<!--IsFileStart-->
-            <div class="main-item-list" id="videoFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
-                文件下载
-            </div>
-            <div class="main-item-list">
-                <div id="download">
-                        <textarea id="url" title="url" rows="5" cols="33" readonly><!--FileEncodeUrl--></textarea>
-                        
-                        <div id="download_tip">拥有链接的人员都可查看.</div>
-                        <div id="download_bu">
-                            <button id="download_1" onclick="navigator.clipboard.writeText(document.querySelector('#url').innerHTML)">复制链接</button>
-                            <button id="download_2" onclick="window.location.href = '<!--FileEncodeUrl-->'">点击下载</button>
-                        </div>
-                </div>
-            </div>
-<!--IsFileEnd-->
 
 <!-- 文件列表 -->
 <!--IsFolderStart-->
@@ -254,40 +180,7 @@
                     <div class="main-items-fileSize" ><!--size--></div>
                 </div>
 <!--FolderListEnd-->
-<!--FileListStart-->
-                <div class="main-items">
-                    <div class="main-items-icon">
-                        <i class="iconfont">&#xe746;</i>
-                    </div>
-                    <div class="main-items-fileName">
-                        <a href="<!--FileEncodeReplaceUrl-->?preview" target="_blank"><!--FileEncodeReplaceName--></a>
-                    </div>
-                    <div class="main-items-dateTime" ><!--lastModifiedDateTime--></div>
-                    <div class="main-items-fileSize" ><!--size--></div>
-                </div>
-<!--FileListEnd-->
-            </div>
-<!--IsFolderEnd-->
-<!--ReadmemdStart-->
-            <div class="main-item-list" id="readme-div" style="padding: 20px;">
-                <div class="list-header-container">
-                    <div class="readme">
-                        <div class="markdown-body" id="readme">
-                            <textarea id="readme-md" style="display:none;"><!--ReadmemdContent--></textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!--ReadmemdEnd-->
-            <div style="text-align: center; margin-top: 100px;">
-                <div id="foot_info">
-                </div>
-                <script>
-                    let year = new Date().getFullYear()
-                    document.querySelector("#foot_info").innerHTML='Copyright © ' + year + ' | Powered by <a href="https://github.com/qkqpttgf/OneManager-php/">Onemanager</a> |   <a href="https://github.com/lswlc33/Onemanager_theme_new_onedrive/">Theme</a> by <a href="https://github.com/lswlc33/">雪中明月</a>'
-                </script>
-            </div>
-        </div>
+
 <!--ListEnd-->
 
     </main>
