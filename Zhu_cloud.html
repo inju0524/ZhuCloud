@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<html lang="<!--constStr@language-->">
-	<head>
-		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="keywords" content="<!--Keywords-->">
-        <meta name="description" content="<!--Description-->">
-        <link rel="icon" href="<!--base_path-->favicon.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="<!--base_path-->favicon.ico" type="image/x-icon">
-        
-        <title><!--Title--></title>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><!--Title--></title>
+    <link rel="shortcut icon" href="<!--base_path-->favicon.ico" type="image/x-icon">
 
-
-  <!--MdRequireStart-->
+    <!--MdRequireStart-->
     <link rel="stylesheet" href="https://unpkg.com/github-markdown-css@3.0.1/github-markdown.css">
     <script type="text/javascript" src="?jsFile=marked.js"></script>
     <!--MdRequireEnd-->
@@ -19,14 +14,103 @@
     <!--https://p.sfx.ms/images/favicon.ico-->
     <!--GuestUploadStart--><script type="text/javascript" src="?jsFile=spark-md5.min.js"></script><!--GuestUploadEnd-->
     <!--AliyundriveUploadJsStart--><script src="https://unpkg.com/bignumber.js@9.0.2/bignumber.js"></script><script src="?jsFile=sha1.min.js"></script><!--AliyundriveUploadJsEnd-->
-
-
-        <!--customCss-->
-	<link rel="stylesheet" href="https://charo.koto.cc/aom-assets/_astro/allinone.43fc9617.css" />
+    
+    	<link rel="stylesheet" href="https://charo.koto.cc/aom-assets/_astro/allinone.43fc9617.css" />
 <link rel="stylesheet" href="https://charo.koto.cc/aom-assets/_astro/allinone.11a782e3.css" /><script type="module" src="https://charo.koto.cc/aom-assets/_astro/hoisted.d9ceb923.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/s.6.14.1.min.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/MultiDisk-legacy.a36c04d2.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/hoisted-legacy.dc9c781c.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/hoisted-legacy.fd96d87d.js"></script>
 
-<style>
+    <style>
+        /* 通用样式 */
+        /* 用于消除默认自带样式 */
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+            overflow: hidden;
+        }
+        a { 
+            text-decoration: none;
+            font-weight: 400;
+            color: rgb(97, 97, 97);
+            transition: 0.5s;
+        }
+        a:hover {
+            color: rgb(36, 36, 36);
+        }
+        ul { 
+            list-style: none;
+        }
 
+        /* 兼容样式 */
+        body {
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        select:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+        }
+
+        /* 自定义样式 */
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1100px;
+        }
+        .pull-left { 
+            float: left; 
+            padding: 0px 20px;
+        }
+        .pull-right { 
+            float: right; 
+        }
+
+        /* 字体外部引用 */
+        @font-face {
+            font-family: 'iconfont';  /* project id 1634400 */
+            src: url('//at.alicdn.com/t/font_1634400_9yg8f5s278.eot');
+            src: url('//at.alicdn.com/t/font_1634400_9yg8f5s278.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_1634400_9yg8f5s278.woff2') format('woff2'),
+            url('//at.alicdn.com/t/font_1634400_9yg8f5s278.woff') format('woff'),
+            url('//at.alicdn.com/t/font_1634400_9yg8f5s278.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_1634400_9yg8f5s278.svg#iconfont') format('svg');
+        }
+        .iconfont {
+            font-family:"iconfont" !important;
+            font-size:16px;font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* header */
+        header {
+            width: 100%;
+            line-height: 48px;
+            background-color: rgba(255,255,255,0.5);
+            position: fixed;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+        }
+        header nav a {
+            color: rgb(36, 36, 36);
+            font-weight: 600;
+            transition: 0.5s;
+        }
+        header nav .lang .language { outline: none; }
+        header .control {
+            height: 40px;
+            line-height: 40px;
+            background-color: #f4f4f4;
+        }
+        header .control .control-item {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
 
         /* main */
         main { 
@@ -329,9 +413,12 @@
         }
    </style>
 
+<!-- 附加样式与脚本 -->
+   <!--customCss-->
+   <!--customScript-->
 </head>
-	<body>
-		<header>
+<body>
+<header>
 	<span class="left">
 	<span onclick="SideBar.Open()" title="Open Sidebar.">
 			<svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:bars-3"><path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75zM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75z" clip-rule="evenodd"/></svg>
@@ -744,10 +831,256 @@ function nextpage(num) {
         , And INJU.
     </p>
 </div>
+    </main>
+    <footer>
+        <!-- OneDrive程序 -->
+    </footer>
+    <div id="mask" class="mask" style="display:none;"></div>
+<!--LoginStart-->
+    <div id="login_div" class="operatediv" style="display:none">
+        <div style="margin:50px">
+            <a onclick="operatediv_close('login')" class="operatediv_close"><!--constStr@Close--></a>
+	        <center>
+	            <form action="<!--IsPreview?-->login=admin" method="post">
+		        <input id="login_input" name="password1" type="password" placeholder="<!--constStr@InputPassword-->">
+		        <input type="submit" value="<!--constStr@Login-->">
+	            </form>
+            </center>
+        </div>
+	</div>
+<!--LoginEnd-->
 
+<!-- 下面是js脚本 -->
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+<!--ListStart-->
+    /*var root = '<!--base_disk_path-->';
+    function path_format(path) {
+        path = '/' + path + '/';
+        while (path.indexOf('//') !== -1) {
+            path = path.replace('//', '/')
+        }
+        return path
+    }
+    document.querySelectorAll('.main-title-path').forEach(function (e) {
+        var path = e.innerText;
+        if (path.substr(path.length-1)=='/') path = path.substr(0, path.length-1);
+        var paths = path.split('/');
+        e.innerHTML = '<a href="' + root + '"><!--constStr@Home--></a> > ';
+        if (paths <= 2) return;
+        for (var i = 1; i < paths.length - 1; i++) {
+            var to = path_format(root + paths.slice(0, i + 1).join('/'));
+            e.innerHTML += '<a href="' + to + '">' + paths[i] + '</a> > '
+        }
+        e.innerHTML += paths[paths.length - 1];
+        e.innerHTML = e.innerHTML.replace(/\s\/\s$/, '')
+    });*/
 
+// 文件预览相关
+<!--IsFileStart-->
+    var $url = document.getElementById('url');
+    if ($url) {
+        //$url.innerHTML = location.protocol + '//' + location.host + $url.innerHTML;
+        let url = location.href;
+        url = url.substr(0, url.length-8);
+        $url.innerHTML = url.replace(/&amp;/g, '&amp;amp;');
+        $url.style.height = $url.scrollHeight + 'px';
+    }
+<!--IsvideoFileStart-->
+    function loadResources(type, src, callback) {
+        let script = document.createElement(type);
+        let loaded = false;
+        if (typeof callback === 'function') {
+            script.onload = script.onreadystatechange = () => {
+                if (!loaded && (!script.readyState || /loaded|complete/.test(script.readyState))) {
+                    script.onload = script.onreadystatechange = null;
+                    loaded = true;
+                    callback();
+                }
+            }
+        }
+        if (type === 'link') {
+            script.href = src;
+            script.rel = 'stylesheet';
+        } else {
+            script.src = src;
+        }
+        document.getElementsByTagName('head')[0].appendChild(script);
+    }
+    function addVideos(videos) {
+        let host = 'https://s0.pstatp.com/cdn/expire-1-M';
+        let unloadedResourceCount = 4;
+        let callback = (() => {
+            return () => {
+                if (!--unloadedResourceCount) {
+                    createDplayers(videos);
+                }
+            };
+        })(unloadedResourceCount, videos);
+        loadResources(
+            'link',
+            host + '/dplayer/1.25.0/DPlayer.min.css',
+            callback
+        );
+        loadResources(
+            'script',
+            host + '/dplayer/1.25.0/DPlayer.min.js',
+            callback
+        );
+        loadResources(
+            'script',
+            host + '/hls.js/0.12.4/hls.light.min.js',
+            callback
+        );
+        loadResources(
+            'script',
+            host + '/flv.js/1.5.0/flv.min.js',
+            callback
+        );
+    }
+    function createDplayers(videos) {
+        for (i = 0; i < videos.length; i++) {
+            console.log(videos[i]);
+            new DPlayer({
+                container: document.getElementById('video-a' + i),
+                screenshot: true,
+                video: {
+                    url: videos[i]
+                }
+            });
+        }
+    }
+    addVideos(['<!--FileDownUrl-->']);
+<!--IsvideoFileEnd-->
+<!--IspdfFileStart-->
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://unpkg.com/pdfjs-dist@2.4.456/build/pdf.worker.min.js';
+    var loadingTask = pdfjsLib.getDocument({
+        url: "<!--FileDownUrl-->",
+        cMapUrl: "https://unpkg.com/pdfjs-dist@2.4.456/cmaps/",
+        cMapPacked: true,
+        disableStream: true,
+        disableAutoFetch: true,
+        rangeChunkSize: 65535
+    });
+    /*loadingTask.onProgress = (e) => {
+        //console.log(e);
+        var p = document.getElementById('p');
+        if (p==null) {
+            p = document.createElement('div');
+            p.id = 'p';
+            p.setAttribute('onclick', "this.style.display = 'none';");
+            p.style = 'left: 10px; top: 30%; position: fixed;';
+            document.body.appendChild(p);
+        }
+        p.innerHTML = 'Loaded: ' + ((e.loaded/e.total)*100).toFixed(2) + '%<br>(' + size_format(e.loaded) + ' / ' + size_format(e.total) + ')';
+        p.style.display = '';
+        if (e.loaded==e.total) p.style.display = 'none';
+        
+    }*/
+    loadingTask.promise.then(function(pdf) {
+        var pagenum =  pdf.numPages;
+        var pdfContainer = document.getElementById('pdf-d');
+        pdfContainer.innerHTML = '';
+        var pagepos = 1;
+        var pdfnextpagebutton = document.createElement('button');
+        pdfnextpagebutton.id = 'pdfnextpagebutton';
+        pdfnextpagebutton.innerText = 'Load page ' + pagepos + '-' + (pagepos+4<pagenum?pagepos+4:pagenum) + ' (' + pagenum + ')';
+        pdfnextpagebutton.setAttribute('onclick', "this.style.display = 'none';");
+        pdfnextpagebutton.style.display = 'none';
+        pdfContainer.appendChild(pdfnextpagebutton);
+        var pdfWaitNextPage = setInterval(function(){
+            //console.log(document.documentElement.scrollTop + ", " + document.body.scrollHeight);
+            if (pdfnextpagebutton.style.display=='none') {
+                for (var i=pagepos;i<=(pagepos+4<pagenum?pagepos+4:pagenum);i++) {
+                    var canvasNew = document.createElement('canvas');
+                    canvasNew.id = 'pdf-c'+i;
+                    pdfContainer.appendChild(canvasNew);
+                    renderpage(pdf,i);
+                }
+                pagepos = i;
+                if (pagepos<pagenum) {
+                    console.log("next page: " + pagepos + " / " + pagenum);
+                    pdfnextpagebutton.innerText = 'Load page ' + pagepos + '-' + (pagepos+4<pagenum?pagepos+4:pagenum) + ' (' + pagenum + ')';
+                    pdfnextpagebutton.style.display ='';
+                    pdfContainer.appendChild(pdfnextpagebutton);
+                } else {
+                    console.log("end of pdf");
+                    clearInterval(pdfWaitNextPage);
+                }
+            }
+        }, 1000);
+    });
+    function renderpage(pdf,i) {
+        pdf.getPage(i).then(function(page) { 
+            var scale = 1.5;
+            var viewport = page.getViewport({ scale: scale, });
+            var canvas = document.getElementById('pdf-c'+i);
+            var context = canvas.getContext("2d");
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+            var renderContext = {
+                canvasContext: context,
+                viewport: viewport,
+            };
+            page.render(renderContext);
+        });
+    }
+    function size_format(num) {
+        if (num>1024) {
+            num=num/1024;
+        } else {
+            return num.toFixed(2) + ' B';
+        }
+        if (num>1024) {
+            num=num/1024;
+        } else {
+            return num.toFixed(2) + ' KB';
+        }
+        if (num>1024) {
+            num=num/1024;
+        } else {
+            return num.toFixed(2) + ' MB';
+        }
+        return num.toFixed(2) + ' GB';
+    }
+<!--IspdfFileEnd-->
+<!--IstxtFileStart-->
+    var $textarea=document.getElementById('txt-a');
+    if ($textarea) {
+        $textarea.style.height = $textarea.scrollHeight + 'px';
+    }
+<!--IstxtFileEnd-->
+<!--IsFileEnd-->
+<!--ListEnd-->
+<!--LoginStart-->
+        function login() {
+            document.getElementById('mask').style.display='';
+                //document.getElementById('mask').style.width=document.documentElement.scrollWidth+'px';
+            document.getElementById('mask').style.height=document.documentElement.scrollHeight<window.innerHeight?window.innerHeight:document.documentElement.scrollHeight+'px';
+            document.getElementById('login_div').style.display='';
+            document.getElementById('login_div').style.left=(document.body.clientWidth-document.getElementById('login_div').offsetWidth)/2 +'px';
+            document.getElementById('login_div').style.top=(window.innerHeight-document.getElementById('login_div').offsetHeight)/2+document.body.scrollTop +'px';
+            document.getElementById('login_input').focus();
+        }
+<!--LoginEnd-->
 
-	<!-- 文件上传相关 -->
+// 功能性文件
+<!--HeadmdStart-->
+    var $head = document.getElementById('head');
+    if ($head) {
+        //document.getElementById('head-div').parentNode.insertBefore(document.getElementById('head-div'),document.getElementById('list-div'));
+        $head.innerHTML = marked(document.getElementById('head-md').innerText);
+    }
+<!--HeadmdEnd-->
+<!--ReadmemdStart-->
+    var $readme = document.getElementById('readme');
+    if ($readme) {
+        $readme.innerHTML = marked(document.getElementById('readme-md').innerText);
+    }
+<!--ReadmemdEnd-->
+    </script>
+
+<!-- 文件上传相关 -->
     <script>
         <!--UploadJsStart-->
     function size_format(num) {
@@ -1395,26 +1728,5 @@ function nextpage(num) {
 <!--AliyundriveUploadJsEnd-->
     </script>
 
-
-
-	</body>
-	
-
-	
-	
-	<!--customScript--></html><!--IconValuesStart--><!--
-
-{
-    "music":"musical-notes",
-    "video":"logo-youtube",
-    "img":"image",
-    "office":"newspaper",
-    "txt":"clipboard",
-    "zip":"file-tray-full",
-    "iso":"disc",
-    "apk":"logo-android",
-    "exe":"logo-windows",
-    "default":"document"
-}
-
---><!--IconValuesEnd-->
+</body>
+</html>
