@@ -159,21 +159,24 @@
             </div>
 <!--EncryptedEnd-->
 
-		<!-- 游客上传 -->
+	
+
+<!-- 游客上传 -->
 <!--GuestUploadStart-->
-            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+            <div class="Contents" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
                 文件上传
             </div>
 
-            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+            <div class="Contents" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
                 <div id="upload_div">
+                                        <div class="Contents" id="upload_file_bu">上传文件<input class="Contents" id="upload_file" type="file" name="upload_filename" multiple="multiple"></div>
                     <div id="upload_btns" align="center">
-                        <select onchange="document.getElementById('upload_file').webkitdirectory=this.value;">
+                        <select class="UglyButton astro-5BUYZ7RE" onchange="document.getElementById('upload_file').webkitdirectory=this.value;">
                             <option value="">文件</option>
                             <option value="1">文件夹</option>
                         </select>
-                        <div id="upload_file_bu">上传文件<input id="upload_file" type="file" name="upload_filename" multiple="multiple"></div>
-                        <input id="upload_submit" onclick="preup();" value="上传" type="button">
+
+                        <input class="UglyButton astro-5BUYZ7RE" id="upload_submit" onclick="preup();" value="上传" type="button">
                     </div>
                 </div>
             </div>
