@@ -88,9 +88,223 @@
 </head>
 	<body>
 	  
-    <main>
-        <!--ListStart-->
+    		<header>
+	<span class="left">
+	<span onclick="SideBar.Open()" title="Open Sidebar.">
+			<svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:bars-3"><path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75zM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75z" clip-rule="evenodd"/></svg>
+			<!-- <Menu /> -->
+		</span>
+		<span onclick="MultiDisk.Expand()" title="Open multi disk controller">
+			<span class="ExpandIcon" data-ControllerHidden="true"><svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:chevron-down"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5z" clip-rule="evenodd"/></svg></span>
+		</span>
+		
+	</span>
 
+    <div class="Header">
+
+		<a class="title" href="/">
+			<img src="<!--base_path-->favicon.ico" alt="">
+			<span><!--Sitename--></span>
+    	</a>
+		
+		<span class="CurrentDriveName" onclick="MultiDisk.Expand();">
+			<span id="DriveName">(CurrentDriveName)</span>
+			<span class="ExpandIcon" data-ControllerHidden="true"><svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:chevron-down"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5z" clip-rule="evenodd"/></svg></span>
+		</span>
+
+    </div>
+
+	<span class="right">
+		<span onclick="ThemeSwitcher.Switch();" title="Switch theme, light or dark">
+			<span class="ThemeSwitcher astro-PLNBXQHS">
+    <span id="MoonIcon" style="display: inline-block;" class="astro-PLNBXQHS">
+        <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-PLNBXQHS" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162z" clip-rule="evenodd"/></svg>
+    </span>
+    <span id="SunIcon" style="display: none;" class="astro-PLNBXQHS">
+        <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-PLNBXQHS" astro-icon="heroicons:sun"><path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75zM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0zm11.394-5.834a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59zM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75zm-3.916 6.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591zM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18zm-4.242-.697a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59zM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12zm.697-4.243a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591z"/></svg>
+    </span>
+</span>
+		</span>
+		<span onclick="location.assign('/?login=admin')" title="Login">
+			<svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:arrow-right-on-rectangle"><path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 0 0 6 5.25v13.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V15a.75.75 0 0 1 1.5 0v3.75a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3V9A.75.75 0 0 1 15 9V5.25a1.5 1.5 0 0 0-1.5-1.5h-6zm10.72 4.72a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1 0 1.06l-3 3a.75.75 0 1 1-1.06-1.06l1.72-1.72H9a.75.75 0 0 1 0-1.5h10.94l-1.72-1.72a.75.75 0 0 1 0-1.06z" clip-rule="evenodd"/></svg>
+		</span>
+	</span>
+</header>
+
+<!--MultiDiskAreaStart-->
+<div class="MultiDiskContainer hidden astro-H4YAVCU5" id="more-disk-div">
+    <div class="MultiDisk astro-H4YAVCU5">
+        <!--MultiDisksStart-->
+            <a href="<!--MultiDisksUrl-->" class="Disk <!--MultiDisksNow--> astro-H4YAVCU5" aria-label="A disk">
+                <!--MultiDisksName-->
+            </a>
+        <!--MultiDisksEnd-->
+    </div>
+</div>
+<!--MultiDiskAreaEnd-->
+		<main>
+
+		    <!--HeadomfStart-->
+		        <div class="Contents">
+                    <div class="customfile" id="head-om">
+                        <!--HeadomfContent-->
+                    </div>
+		        </div>
+            <!--HeadomfEnd-->
+
+            <!--HeadmdStart-->
+		        <div class="Contents">
+                    <div class="markdown-body" id="head">
+                        <textarea id="head-md" style="display:none;"><!--HeadmdContent--></textarea>
+                    </div>
+
+                    
+                </div>
+            <!--HeadmdEnd-->
+            
+
+
+            <div class="Contents">
+                <div>
+                    
+                    <div style="display: flex; align-items: center;">
+    <a class="UglyButton astro-5BUYZ7RE" href="<!--base_path-->" data-disabled="undefined">
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:home"><path d="M11.47 3.84a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.06l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 0 0 1.061 1.06l8.69-8.69z"/><path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.43z"/></svg>
+</a>
+    
+    <!--DiskPathArrayStart-->
+    
+    <span class="UglyIcon astro-27M7QWAL">
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:chevron-right"><path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5z" clip-rule="evenodd"/></svg>
+</span>
+    
+    <a class="UglyButton astro-5BUYZ7RE" href="<!--PathArrayLink-->" data-disabled="undefined">
+    
+        <!--PathArrayName-->
+    
+</a>
+    
+    <!--DiskPathArrayEnd-->
+</div>
+
+                    <div class="Divider astro-233M6D5J"></div>
+
+                    <h3><!--constStr@File--></h3>
+
+                    <!--IsFolderStart-->
+                        <div class="FolderDesc astro-QZ24M4LY" id="<!--FolderId-->">
+    <div class="FileName astro-QZ24M4LY">
+        <!--constStr@File-->
+    </div>
+    <div style="width: 20%;text-align: right;" class="EditTime astro-QZ24M4LY">
+        <!--constStr@EditTime-->
+    </div>
+    <div style="width: 20%;text-align: right;" class="Size astro-QZ24M4LY">
+        <!--constStr@Size-->
+    </div>
+</div>
+
+<!--FolderListStart-->
+<div id="Folders" class="astro-QZ24M4LY">
+    <a class="UglyLink astro-ZMKMY7GO" href="<!--FileEncodeReplaceUrl-->/">
+    <div class="ListItems astro-QZ24M4LY">
+            <div data-FileId="<!--FileId-->" class="astro-QZ24M4LY">
+                <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-QZ24M4LY" astro-icon="heroicons:folder"><path d="M19.5 21a3 3 0 0 0 3-3v-4.5a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h15zm-18-10.854V6a3 3 0 0 1 3-3h5.379a2.25 2.25 0 0 1 1.59.659l2.122 2.121c.14.141.331.22.53.22H19.5a3 3 0 0 1 3 3v1.146A4.483 4.483 0 0 0 19.5 9h-15a4.483 4.483 0 0 0-3 1.146z"/></svg>
+                <!--FileEncodeReplaceName-->
+            </div>
+            <div class="astro-QZ24M4LY">
+                <!--lastModifiedDateTime-->
+            </div>
+            <div class="astro-QZ24M4LY">
+                <!--size-->
+            </div>
+        </div>
+</a>
+</div>
+<!--FolderListEnd-->
+
+<!--FileListStart-->
+<div id="Files" class="astro-QZ24M4LY">
+    <a class="UglyLink astro-ZMKMY7GO" href="<!--FileEncodeReplaceUrl-->?preview">
+    <div class="ListItems astro-QZ24M4LY">
+            <div data-FileId="<!--FileId-->" class="astro-QZ24M4LY">
+                <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-QZ24M4LY" astro-icon="heroicons:document"><path d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625z"/><path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963z"/></svg>
+                <!--FileEncodeReplaceName-->
+            </div>
+            <div class="astro-QZ24M4LY">
+                <!--lastModifiedDateTime-->
+            </div>
+            <div class="astro-QZ24M4LY">
+                <!--size-->
+            </div>
+        </div>
+</a>
+</div>
+<!--FileListEnd-->
+
+<!--MorePageStart-->
+<form class="MorePage astro-R62JC56R" action="" method="POST" id="nextpageform">
+    <input type="hidden" id="pagenum" name="pagenum" value="" class="astro-R62JC56R">
+
+    <div class="astro-R62JC56R">
+        <div class="astro-R62JC56R">
+            <!--PrePageStart-->
+            <a class="UglyButton astro-5BUYZ7RE" onclick="nextpage(<!--PrePageNum-->);" data-disabled="undefined">
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-R62JC56R" astro-icon="heroicons:arrow-left"><path fill-rule="evenodd" d="M11.03 3.97a.75.75 0 0 1 0 1.06l-6.22 6.22H21a.75.75 0 0 1 0 1.5H4.81l6.22 6.22a.75.75 0 1 1-1.06 1.06l-7.5-7.5a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 0 1 1.06 0z" clip-rule="evenodd"/></svg>
+</a>
+            <!--PrePageEnd-->
+        </div>
+        <div class="updated_at astro-R62JC56R">
+            <!--MorePageListStart-->
+                <a onclick="nextpage(<!--PageNum-->);" class="astro-R62JC56R"><!--PageNum--></a>
+            <!--MorePageListEnd-->
+            
+            <!--MorePageListNowStart-->
+                <a style="font-size: larger;" class="astro-R62JC56R"><!--PageNum--></a>
+            <!--MorePageListNowEnd-->
+    </div>
+        <div class="astro-R62JC56R">
+            <!--NextPageStart-->
+            <a class="UglyButton astro-5BUYZ7RE" onclick="nextpage(<!--NextPageNum-->);" data-disabled="undefined">
+    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-R62JC56R" astro-icon="heroicons:arrow-right"><path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06z" clip-rule="evenodd"/></svg>
+</a>
+            <!--NextPageEnd-->
+        </div>
+    </div>
+</form>
+
+
+<script>
+function nextpage(num) {
+    document.getElementById('pagenum').value=num;
+    document.getElementById('nextpageform').submit();
+}
+</script>
+<!--MorePageEnd-->
+                    <!--IsFolderEnd-->
+
+                    <!--IsFileStart-->
+                        <div style="text-align: center; width=90%;margin: 0 auto; padding: 15px 5px;">
+
+    <!--IsOtherFileStart-->
+    <p><!--constStr@FileNotSupport--></p>
+    <!--IsOtherFileEnd-->
+
+    <code id="url" title="url">
+        <!--FileEncodeUrl-->
+    </code>
+    <a class="UglyButton astro-5BUYZ7RE" href="<!--FileEncodeUrl-->" data-disabled="undefined">
+    <span><svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:arrow-down-tray"><path fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v11.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.22 3.22V3a.75.75 0 0 1 .75-.75zm-9 13.5a.75.75 0 0 1 .75.75v2.25a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V16.5a.75.75 0 0 1 1.5 0v2.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V16.5a.75.75 0 0 1 .75-.75z" clip-rule="evenodd"/></svg>&nbsp;<!--constStr@Download--></span>
+</a>
+    <a class="UglyButton astro-5BUYZ7RE" href="<!--FileEncodeUrl-->" data-disabled="undefined">
+    <span><svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:document-duplicate"><path d="M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.161 14.34 9 15.375 9h1.875A3.75 3.75 0 0 1 21 12.75v3.375C21 17.16 20.16 18 19.125 18h-9.75A1.875 1.875 0 0 1 7.5 16.125V3.375z"/><path d="M15 5.25a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 17.25 7.5h-1.875A.375.375 0 0 1 15 7.125V5.25zM4.875 6H6v10.125A3.375 3.375 0 0 0 9.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V7.875C3 6.839 3.84 6 4.875 6z"/></svg>&nbsp;Copy URL</span>
+</a>
+    <script>
+        var $url = document.getElementById("url");
+        if ($url) {
+            $url.innerHTML = location.href.replace(/\?preview$/gi, "").replace(/&amp;/g, "&amp;amp;");
+        }
+    </script>
 
 
 
@@ -120,31 +334,7 @@
 
 
 
-<!-- 文件列表 -->
-<!--IsFolderStart-->
-            <div class="main-item-list">
-                <div class="main-items main-item-title">
-                    <div class="inner-container">
-                        <div class="main-items-icon">
-                            <i class="iconfont">&#xe746;</i>
-                        </div>
-                        <div class="main-items-displayName"><!--constStr@File--></div>
-                        <div class="main-items-dateModified"><!--constStr@EditTime--></div>
-                        <div class="main-items-size"><!--constStr@Size--></div>
-                    </div>
-                </div>
-<!--FolderListStart-->
-                <div class="main-items">
-                    <div class="main-items-icon">
-                        <img src="https://spoprod-a.akamaihd.net/files/fabric/assets/item-types-fluent/20/folder.svg" alt="folder icon">
-                    </div>
-                    <div class="main-items-fileName">
-                        <a href="<!--FileEncodeReplaceUrl-->/"><!--FileEncodeReplaceName--></a>
-                    </div>
-                    <div class="main-items-dateTime" ><!--lastModifiedDateTime--></div>
-                    <div class="main-items-fileSize" ><!--size--></div>
-                </div>
-<!--FolderListEnd-->
+
 
 <!--ListEnd-->
 
