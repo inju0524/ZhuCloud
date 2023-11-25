@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><!--Title--></title>
-    <link rel="shortcut icon" href="<!--base_path-->favicon.ico" type="image/x-icon">
+<html lang="<!--constStr@language-->">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="keywords" content="<!--Keywords-->">
+        <meta name="description" content="<!--Description-->">
+        <link rel="icon" href="<!--base_path-->favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="<!--base_path-->favicon.ico" type="image/x-icon">
+        
+        <title><!--Title--></title>
 
-    <!--MdRequireStart-->
+
+  <!--MdRequireStart-->
     <link rel="stylesheet" href="https://unpkg.com/github-markdown-css@3.0.1/github-markdown.css">
     <script type="text/javascript" src="?jsFile=marked.js"></script>
     <!--MdRequireEnd-->
@@ -14,103 +19,14 @@
     <!--https://p.sfx.ms/images/favicon.ico-->
     <!--GuestUploadStart--><script type="text/javascript" src="?jsFile=spark-md5.min.js"></script><!--GuestUploadEnd-->
     <!--AliyundriveUploadJsStart--><script src="https://unpkg.com/bignumber.js@9.0.2/bignumber.js"></script><script src="?jsFile=sha1.min.js"></script><!--AliyundriveUploadJsEnd-->
-    
-    	<link rel="stylesheet" href="https://charo.koto.cc/aom-assets/_astro/allinone.43fc9617.css" />
+
+
+        <!--customCss-->
+	<link rel="stylesheet" href="https://charo.koto.cc/aom-assets/_astro/allinone.43fc9617.css" />
 <link rel="stylesheet" href="https://charo.koto.cc/aom-assets/_astro/allinone.11a782e3.css" /><script type="module" src="https://charo.koto.cc/aom-assets/_astro/hoisted.d9ceb923.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/s.6.14.1.min.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/MultiDisk-legacy.a36c04d2.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/hoisted-legacy.dc9c781c.js"></script><script nomodule src="https://charo.koto.cc/aom-assets/_astro/hoisted-legacy.fd96d87d.js"></script>
 
-    <style>
-        /* 通用样式 */
-        /* 用于消除默认自带样式 */
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-            overflow: hidden;
-        }
-        a { 
-            text-decoration: none;
-            font-weight: 400;
-            color: rgb(97, 97, 97);
-            transition: 0.5s;
-        }
-        a:hover {
-            color: rgb(36, 36, 36);
-        }
-        ul { 
-            list-style: none;
-        }
+<style>
 
-        /* 兼容样式 */
-        body {
-            -webkit-user-select:none;
-            -moz-user-select:none;
-            -ms-user-select:none;
-            user-select:none;
-        }
-        select:-moz-focusring {
-            color: transparent;
-            text-shadow: 0 0 0 #000;
-        }
-
-        /* 自定义样式 */
-        .container {
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 1100px;
-        }
-        .pull-left { 
-            float: left; 
-            padding: 0px 20px;
-        }
-        .pull-right { 
-            float: right; 
-        }
-
-        /* 字体外部引用 */
-        @font-face {
-            font-family: 'iconfont';  /* project id 1634400 */
-            src: url('//at.alicdn.com/t/font_1634400_9yg8f5s278.eot');
-            src: url('//at.alicdn.com/t/font_1634400_9yg8f5s278.eot?#iefix') format('embedded-opentype'),
-            url('//at.alicdn.com/t/font_1634400_9yg8f5s278.woff2') format('woff2'),
-            url('//at.alicdn.com/t/font_1634400_9yg8f5s278.woff') format('woff'),
-            url('//at.alicdn.com/t/font_1634400_9yg8f5s278.ttf') format('truetype'),
-            url('//at.alicdn.com/t/font_1634400_9yg8f5s278.svg#iconfont') format('svg');
-        }
-        .iconfont {
-            font-family:"iconfont" !important;
-            font-size:16px;font-style:normal;
-            -webkit-font-smoothing: antialiased;
-            -webkit-text-stroke-width: 0.2px;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* header */
-        header {
-            width: 100%;
-            line-height: 48px;
-            background-color: rgba(255,255,255,0.5);
-            position: fixed;
-            z-index: 1;
-            backdrop-filter: blur(10px);
-        }
-        header nav a {
-            color: rgb(36, 36, 36);
-            font-weight: 600;
-            transition: 0.5s;
-        }
-        header nav .lang .language { outline: none; }
-        header .control {
-            height: 40px;
-            line-height: 40px;
-            background-color: #f4f4f4;
-        }
-        header .control .control-item {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
 
         /* main */
         main { 
@@ -413,241 +329,59 @@
         }
    </style>
 
-<!-- 附加样式与脚本 -->
-   <!--customCss-->
-   <!--customScript-->
 </head>
-<body>
-<header>
-	<span class="left">
-	<span onclick="SideBar.Open()" title="Open Sidebar.">
-			<svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:bars-3"><path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75zM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75z" clip-rule="evenodd"/></svg>
-			<!-- <Menu /> -->
-		</span>
-		<span onclick="MultiDisk.Expand()" title="Open multi disk controller">
-			<span class="ExpandIcon" data-ControllerHidden="true"><svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:chevron-down"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5z" clip-rule="evenodd"/></svg></span>
-		</span>
-		
-	</span>
+	<body>
+		<header>
+        <nav class="container">
+            <div class="title pull-left">
+                <a href="<!--base_path-->"><!--Sitename--></a>
+            </div>
+<!--LoginStart-->
+            <div class="pull-right">
+                <a class="pull-left" href="/?login=admin">登录</a>
+            </div>
+<!--LoginEnd-->
+        </nav>
+    </header>
+    <main>
+        <!--ListStart-->
+        <div class="scroll">
+        <div class="container">
+            <div class="main-title">
+                <h1 class="main-title-path">
+                    <a href="<!--base_path-->"><!--constStr@Home--></a>
+<!--DiskPathArrayStart-->
+                    >
+                    <a href="<!--PathArrayLink-->"><!--PathArrayName--></a>
+<!--DiskPathArrayEnd-->
+                </h1>
+            </div>
 
-    <div class="Header">
-
-		<a class="title" href="/">
-			<img src="<!--base_path-->favicon.ico" alt="">
-			<span><!--Sitename--></span>
-    	</a>
-		
-		<span class="CurrentDriveName" onclick="MultiDisk.Expand();">
-			<span id="DriveName">(CurrentDriveName)</span>
-			<span class="ExpandIcon" data-ControllerHidden="true"><svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:chevron-down"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5z" clip-rule="evenodd"/></svg></span>
-		</span>
-
-    </div>
-
-	<span class="right">
-		<span onclick="ThemeSwitcher.Switch();" title="Switch theme, light or dark">
-			<span class="ThemeSwitcher astro-PLNBXQHS">
-    <span id="MoonIcon" style="display: inline-block;" class="astro-PLNBXQHS">
-        <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-PLNBXQHS" astro-icon="heroicons:moon"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162z" clip-rule="evenodd"/></svg>
-    </span>
-    <span id="SunIcon" style="display: none;" class="astro-PLNBXQHS">
-        <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-PLNBXQHS" astro-icon="heroicons:sun"><path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75zM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0zm11.394-5.834a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59zM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75zm-3.916 6.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591zM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18zm-4.242-.697a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59zM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12zm.697-4.243a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591z"/></svg>
-    </span>
-</span>
-		</span>
-		<span onclick="location.assign('/?login=admin')" title="Login">
-			<svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:arrow-right-on-rectangle"><path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 0 0 6 5.25v13.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V15a.75.75 0 0 1 1.5 0v3.75a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3V9A.75.75 0 0 1 15 9V5.25a1.5 1.5 0 0 0-1.5-1.5h-6zm10.72 4.72a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1 0 1.06l-3 3a.75.75 0 1 1-1.06-1.06l1.72-1.72H9a.75.75 0 0 1 0-1.5h10.94l-1.72-1.72a.75.75 0 0 1 0-1.06z" clip-rule="evenodd"/></svg>
-		</span>
-	</span>
-</header>
-
-<!--MultiDiskAreaStart-->
-<!--
-<div class="MultiDiskContainer hidden astro-H4YAVCU5" id="more-disk-div">
-    <div class="MultiDisk astro-H4YAVCU5">
-        <!--MultiDisksStart--/>
-            <a href="<!--MultiDisksUrl--/>" class="Disk <!--MultiDisksNow--/> astro-H4YAVCU5" aria-label="A disk">
-                <!--MultiDisksName--/>
-            </a>
-        <!--MultiDisksEnd--/>
-    </div>
-</div>
-<!--MultiDiskAreaEnd--/>-->
-		<main>
-
-		    <!--HeadomfStart-->
-		        <div class="Contents">
-                    <div class="customfile" id="head-om">
-                        <!--HeadomfContent-->
+<!--HeadmdStart-->
+            <div class="main-item-list" id="head-div">
+                <div class="list-container" style="padding: 20px;">
+                    <div class="list-header-container">
+                        <div class="readme">
+                            <div class="markdown-body" id="head">
+                                <textarea id="head-md" style="display:none;"><!--HeadmdContent--></textarea>
+                            </div>
+                        </div>
                     </div>
-		        </div>
-            <!--HeadomfEnd-->
-
-            <!--HeadmdStart-->
-		        <div class="Contents">
-                    <div class="markdown-body" id="head">
-                        <textarea id="head-md" style="display:none;"><!--HeadmdContent--></textarea>
-                    </div>
-
-                    
                 </div>
-            <!--HeadmdEnd-->
-            
-
-
-            <div class="Contents">
-                <div>
-                    
-                    <div style="display: flex; align-items: center;">
-    <a class="UglyButton astro-5BUYZ7RE" href="<!--base_path-->" data-disabled="undefined">
-    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:home"><path d="M11.47 3.84a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.06l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 0 0 1.061 1.06l8.69-8.69z"/><path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.43z"/></svg>
-</a>
-    
-    <!--DiskPathArrayStart-->
-    
-    <span class="UglyIcon astro-27M7QWAL">
-    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:chevron-right"><path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5z" clip-rule="evenodd"/></svg>
-</span>
-    
-    <a class="UglyButton astro-5BUYZ7RE" href="<!--PathArrayLink-->" data-disabled="undefined">
-    
-        <!--PathArrayName-->
-    
-</a>
-    
-    <!--DiskPathArrayEnd-->
-</div>
-
-                    <div class="Divider astro-233M6D5J"></div>
-
-                    <h3><!--constStr@File--></h3>
-
-                    <!--IsFolderStart-->
-                        <div class="FolderDesc astro-QZ24M4LY" id="<!--FolderId-->">
-    <div class="FileName astro-QZ24M4LY">
-        <!--constStr@File-->
-    </div>
-    <div style="width: 20%;text-align: right;" class="EditTime astro-QZ24M4LY">
-        <!--constStr@EditTime-->
-    </div>
-    <div style="width: 20%;text-align: right;" class="Size astro-QZ24M4LY">
-        <!--constStr@Size-->
-    </div>
-</div>
-
-<!--FolderListStart-->
-<div id="Folders" class="astro-QZ24M4LY">
-    <a class="UglyLink astro-ZMKMY7GO" href="<!--FileEncodeReplaceUrl-->/">
-    <div class="ListItems astro-QZ24M4LY">
-            <div data-FileId="<!--FileId-->" class="astro-QZ24M4LY">
-                <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-QZ24M4LY" astro-icon="heroicons:folder"><path d="M19.5 21a3 3 0 0 0 3-3v-4.5a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h15zm-18-10.854V6a3 3 0 0 1 3-3h5.379a2.25 2.25 0 0 1 1.59.659l2.122 2.121c.14.141.331.22.53.22H19.5a3 3 0 0 1 3 3v1.146A4.483 4.483 0 0 0 19.5 9h-15a4.483 4.483 0 0 0-3 1.146z"/></svg>
-                <!--FileEncodeReplaceName-->
             </div>
-            <div class="astro-QZ24M4LY">
-                <!--lastModifiedDateTime-->
-            </div>
-            <div class="astro-QZ24M4LY">
-                <!--size-->
-            </div>
-        </div>
-</a>
-</div>
-<!--FolderListEnd-->
-
-<!--FileListStart-->
-<div id="Files" class="astro-QZ24M4LY">
-    <a class="UglyLink astro-ZMKMY7GO" href="<!--FileEncodeReplaceUrl-->?preview">
-    <div class="ListItems astro-QZ24M4LY">
-            <div data-FileId="<!--FileId-->" class="astro-QZ24M4LY">
-                <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-QZ24M4LY" astro-icon="heroicons:document"><path d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625z"/><path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963z"/></svg>
-                <!--FileEncodeReplaceName-->
-            </div>
-            <div class="astro-QZ24M4LY">
-                <!--lastModifiedDateTime-->
-            </div>
-            <div class="astro-QZ24M4LY">
-                <!--size-->
-            </div>
-        </div>
-</a>
-</div>
-<!--FileListEnd-->
-
-<!--MorePageStart-->
-<form class="MorePage astro-R62JC56R" action="" method="POST" id="nextpageform">
-    <input type="hidden" id="pagenum" name="pagenum" value="" class="astro-R62JC56R">
-
-    <div class="astro-R62JC56R">
-        <div class="astro-R62JC56R">
-            <!--PrePageStart-->
-            <a class="UglyButton astro-5BUYZ7RE" onclick="nextpage(<!--PrePageNum-->);" data-disabled="undefined">
-    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-R62JC56R" astro-icon="heroicons:arrow-left"><path fill-rule="evenodd" d="M11.03 3.97a.75.75 0 0 1 0 1.06l-6.22 6.22H21a.75.75 0 0 1 0 1.5H4.81l6.22 6.22a.75.75 0 1 1-1.06 1.06l-7.5-7.5a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 0 1 1.06 0z" clip-rule="evenodd"/></svg>
-</a>
-            <!--PrePageEnd-->
-        </div>
-        <div class="updated_at astro-R62JC56R">
-            <!--MorePageListStart-->
-                <a onclick="nextpage(<!--PageNum-->);" class="astro-R62JC56R"><!--PageNum--></a>
-            <!--MorePageListEnd-->
-            
-            <!--MorePageListNowStart-->
-                <a style="font-size: larger;" class="astro-R62JC56R"><!--PageNum--></a>
-            <!--MorePageListNowEnd-->
-    </div>
-        <div class="astro-R62JC56R">
-            <!--NextPageStart-->
-            <a class="UglyButton astro-5BUYZ7RE" onclick="nextpage(<!--NextPageNum-->);" data-disabled="undefined">
-    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" class="astro-R62JC56R" astro-icon="heroicons:arrow-right"><path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06z" clip-rule="evenodd"/></svg>
-</a>
-            <!--NextPageEnd-->
-        </div>
-    </div>
-</form>
-
-
-<script>
-function nextpage(num) {
-    document.getElementById('pagenum').value=num;
-    document.getElementById('nextpageform').submit();
-}
-</script>
-<!--MorePageEnd-->
-                    <!--IsFolderEnd-->
-
-                    <!--IsFileStart-->
-                        <div style="text-align: center; width=90%;margin: 0 auto; padding: 15px 5px;">
-
-    <!--IsOtherFileStart-->
-    <p><!--constStr@FileNotSupport--></p>
-    <!--IsOtherFileEnd-->
-
-    <code id="url" title="url">
-        <!--FileEncodeUrl-->
-    </code>
-    <a class="UglyButton astro-5BUYZ7RE" href="<!--FileEncodeUrl-->" data-disabled="undefined">
-    <span><svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:arrow-down-tray"><path fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v11.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.22 3.22V3a.75.75 0 0 1 .75-.75zm-9 13.5a.75.75 0 0 1 .75.75v2.25a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V16.5a.75.75 0 0 1 1.5 0v2.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V16.5a.75.75 0 0 1 .75-.75z" clip-rule="evenodd"/></svg>&nbsp;<!--constStr@Download--></span>
-</a>
-    <a class="UglyButton astro-5BUYZ7RE" href="<!--FileEncodeUrl-->" data-disabled="undefined">
-    <span><svg fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" astro-icon="heroicons:document-duplicate"><path d="M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.161 14.34 9 15.375 9h1.875A3.75 3.75 0 0 1 21 12.75v3.375C21 17.16 20.16 18 19.125 18h-9.75A1.875 1.875 0 0 1 7.5 16.125V3.375z"/><path d="M15 5.25a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 17.25 7.5h-1.875A.375.375 0 0 1 15 7.125V5.25zM4.875 6H6v10.125A3.375 3.375 0 0 0 9.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V7.875C3 6.839 3.84 6 4.875 6z"/></svg>&nbsp;Copy URL</span>
-</a>
-    <script>
-        var $url = document.getElementById("url");
-        if ($url) {
-            $url.innerHTML = location.href.replace(/\?preview$/gi, "").replace(/&amp;/g, "&amp;amp;");
-        }
-    </script>
+<!--HeadmdEnd-->
 
 <!-- 加密文件夹 -->
 <!--EncryptedStart-->
-            <div class="Contents" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
                 加密文件夹
             </div>
-            <div class="Contents" id="need—pw-div" style="padding: 50px 30px; font-size: larger; font-weight: bold;">
+            <div class="main-item-list" id="need—pw-div" style="padding: 50px 30px; font-size: larger; font-weight: bold;">
                 <center>
                     <form action="" method="post">
-                    <input class="code" id="password1" name="password1" type="password" placeholder="请输入文件夹密码">
+                    <input id="password1" name="password1" type="password" placeholder="请输入文件夹密码">
                     <br>
-                    <input class="UglyButton astro-5BUYZ7RE" type="submit" value="确认">
+                    <input type="submit" value="确认">
                     </form>
                 </center>
             </div>
@@ -673,414 +407,136 @@ function nextpage(num) {
             </div>
 <!--GuestUploadEnd-->
 
-    <!--IstxtFileStart-->
-        <textarea class="code" id="txt-render" readonly>            <!--TxtContent-->
-        </textarea>
-        <script>
-            document.getElementById("txt-render").style.height = $textarea.scrollHeight + "px";
-        </script>
-    <!--IstxtFileEnd-->
-
-
-    <!--IsimgFileStart-->
-    <br>
-    <img src="<!--FileEncodeUrl-->" alt="<!--FileName-->" style="margin: 10px 0;" onload="
-            if (this.offsetWidth>document.getElementById('url').offsetWidth) this.style.width='100%';
-            if (this.offsetHeight>document.documentElement.clientHeight) this.style.height=document.documentElement.clientHeight + 'px';
-        ">
-    <!--IsimgFileEnd-->
-
-
-    <!--IsvideoFileStart-->
-        <div id="dplayer-video" style="margin: 10px 0;" data-src="<!--FileEncodeUrl-->"></div>
-        <script src="https://charo.koto.cc/aom-assets/DPlayer/DPlayer.min.js"></script>
-        <script>
-            const DPlayerObject = new DPlayer({
-                container: document.getElementById("dplayer-video"),
-                video: {
-                    url: document.getElementById("dplayer-video").getAttribute("data-src"),
-                },
-            });
-
-        </script>
-    <!--IsvideoFileEnd-->
-
-
-    <!--IsmusicFileStart-->
-        <audio src="<!--FileDownUrl-->" controls="controls" style="width: 100%;margin: 10px 0;"></audio>
-    <!--IsmusicFileEnd-->
-
-
-    <!--IsofficeFileStart-->
-        <iframe style="margin: 10px 0; border: none; width: 100%; height: 800px" id="office-render" src="https://view.officeapps.live.com/op/view.aspx?src=<!--FileEncodeDownUrl-->"></iframe>
-    <!--IsofficeFileEnd-->
-
-
-
-    <!--IspdfFileStart-->
-        <div id="pdf-render">Loading PDF</div>
-        <script src="https://charo.koto.cc/aom-assets/PDF/pdf.min.js"></script>
-        <script>
-            pdfjsLib.GlobalWorkerOptions.workerSrc = "https://charo.koto.cc/aom-assets/PDF/pdf.worker.min.js";
-            var loadingTask = pdfjsLib.getDocument({
-                url: "<!--FileDownUrl-->",
-                disableStream: true,
-                disableAutoFetch: true,
-                rangeChunkSize: 65535
-            });
-            loadingTask.promise.then(function(pdf) {
-                var pdfContainer = document.getElementById('pdf-render');
-                pdfContainer.innerHTML = '';
-                var pagenum =  pdf.numPages;
-                var pagepos = 1;
-                var pdfnextpagebutton = document.createElement('button');
-                pdfnextpagebutton.id = 'pdfnextpagebutton';
-                pdfnextpagebutton.innerText = 'Load page ' + pagepos + '-' + (pagepos+4<pagenum?pagepos+4:pagenum) + ' (' + pagenum + ')';
-                pdfnextpagebutton.setAttribute('onclick', "this.style.display = 'none';");
-                pdfnextpagebutton.style.display = 'none';
-                pdfContainer.appendChild(pdfnextpagebutton);
-                var pdfWaitNextPage = setInterval(function(){
-                    if (pdfnextpagebutton.style.display==='none') {
-                        for (var i=pagepos;i<=(pagepos+4<pagenum?pagepos+4:pagenum);i++) {
-                            var canvasNew = document.createElement('canvas');
-                            canvasNew.id = 'pdf-c'+i;
-                            pdfContainer.appendChild(canvasNew);
-                            renderpage(pdf,i);
-                        }
-                        pagepos = i;
-                        if (pagepos<pagenum) {
-                            console.log("next page: " + pagepos + " / " + pagenum);
-                            pdfnextpagebutton.innerText = 'Load page ' + pagepos + '-' + (pagepos+4<pagenum?pagepos+4:pagenum) + ' (' + pagenum + ')';
-                            pdfnextpagebutton.style.display ='';
-                            pdfContainer.appendChild(pdfnextpagebutton);
-                        } else {
-                            console.log("end of pdf");
-                            clearInterval(pdfWaitNextPage);
-                        }
-                    }
-                }, 1000);
-            });
-            function renderpage(pdf,i) {
-                pdf.getPage(i).then(function(page) { 
-                    var scale = 1.5;
-                    var viewport = page.getViewport({ scale: scale, });
-                    var canvas = document.getElementById('pdf-c'+i);
-                    var context = canvas.getContext("2d");
-                    canvas.height = viewport.height;
-                    canvas.width = viewport.width;
-                    var renderContext = {
-                        canvasContext: context,
-                        viewport: viewport,
-                    };
-                    page.render(renderContext);
-                });
-            }
-        </script>
-    <!--IspdfFileEnd-->
-
-</div>
-
-<style>
-    #pdf-render {
-        box-sizing: border-box;
-        max-width: 100%;
-        height: 75vh;
-        overflow: auto;
-    }
-    #pdf-render canvas {
-        width: 100%;
-    }
-</style>
-                    <!--IsFileEnd-->
-
-                </div>
-            </div>
-            
-
-
-            <!--ReadmemdStart-->
-		        <div class="Contents">
-                    <div class="markdown-body" id="readme">
-                        <textarea id="readme-md" style="display:none;"><!--ReadmemdContent--></textarea>
-                    </div>
-
-                    
-                </div>
-            <!--ReadmemdEnd-->
-            <!--FootomfStart-->
-		        <div class="Contents">
-                    <div class="customfile" id="foot-om">
-                        <!--FootomfContent-->
-                    </div>
-		        </div>
-            <!--FootomfEnd-->
-		</main>
-        <div class="astro-55HNOTDJ">
-    <p style="font-size: larger;" class="astro-55HNOTDJ"></p>
-    <p class="astro-55HNOTDJ">
-        Powered by
-        <a href="https://astro.build/" class="astro-55HNOTDJ">INJU银烛</a>&nbsp;|&nbsp;
-        Theme for
-        <a href="https://github.com/qkqpttgf/OneManager-php" class="astro-55HNOTDJ">Onemanager</a>&nbsp;|&nbsp;
-        Under AGPL-3.0
-    </p>
-    <p class="astro-55HNOTDJ">
-        <a href="https://github.com/kobe-koto/Onemanager-Theme-Charo" class="astro-55HNOTDJ">Theme Charo</a>
-        by
-        <a href="https://github.com/kobe-koto" class="astro-55HNOTDJ">kobe-koto</a>
-        , And INJU.
-    </p>
-</div>
-    </main>
-    <footer>
-        <!-- OneDrive程序 -->
-    </footer>
-    <div id="mask" class="mask" style="display:none;"></div>
-<!--LoginStart-->
-    <div id="login_div" class="operatediv" style="display:none">
-        <div style="margin:50px">
-            <a onclick="operatediv_close('login')" class="operatediv_close"><!--constStr@Close--></a>
-	        <center>
-	            <form action="<!--IsPreview?-->login=admin" method="post">
-		        <input id="login_input" name="password1" type="password" placeholder="<!--constStr@InputPassword-->">
-		        <input type="submit" value="<!--constStr@Login-->">
-	            </form>
-            </center>
-        </div>
-	</div>
-<!--LoginEnd-->
-
-<!-- 下面是js脚本 -->
-    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-    <script>
-<!--ListStart-->
-    /*var root = '<!--base_disk_path-->';
-    function path_format(path) {
-        path = '/' + path + '/';
-        while (path.indexOf('//') !== -1) {
-            path = path.replace('//', '/')
-        }
-        return path
-    }
-    document.querySelectorAll('.main-title-path').forEach(function (e) {
-        var path = e.innerText;
-        if (path.substr(path.length-1)=='/') path = path.substr(0, path.length-1);
-        var paths = path.split('/');
-        e.innerHTML = '<a href="' + root + '"><!--constStr@Home--></a> > ';
-        if (paths <= 2) return;
-        for (var i = 1; i < paths.length - 1; i++) {
-            var to = path_format(root + paths.slice(0, i + 1).join('/'));
-            e.innerHTML += '<a href="' + to + '">' + paths[i] + '</a> > '
-        }
-        e.innerHTML += paths[paths.length - 1];
-        e.innerHTML = e.innerHTML.replace(/\s\/\s$/, '')
-    });*/
-
-// 文件预览相关
+<!-- 文件预览 -->
 <!--IsFileStart-->
-    var $url = document.getElementById('url');
-    if ($url) {
-        //$url.innerHTML = location.protocol + '//' + location.host + $url.innerHTML;
-        let url = location.href;
-        url = url.substr(0, url.length-8);
-        $url.innerHTML = url.replace(/&amp;/g, '&amp;amp;');
-        $url.style.height = $url.scrollHeight + 'px';
-    }
+<!--IsimgFileStart-->
+            <div class="main-item-list" id="imgFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                图片预览
+            </div>
+            <div class="main-item-list" id="imgFil-div" style="padding: 0;overflow: hidden;">
+                <img src="<!--FileDownUrl-->" alt="<!--FileName-->" onload="if (this.offsetWidth>document.getElementById('url').offsetWidth) this.style.width='100%';" />
+            </div>
+<!--IsimgFileEnd-->
+
 <!--IsvideoFileStart-->
-    function loadResources(type, src, callback) {
-        let script = document.createElement(type);
-        let loaded = false;
-        if (typeof callback === 'function') {
-            script.onload = script.onreadystatechange = () => {
-                if (!loaded && (!script.readyState || /loaded|complete/.test(script.readyState))) {
-                    script.onload = script.onreadystatechange = null;
-                    loaded = true;
-                    callback();
-                }
-            }
-        }
-        if (type === 'link') {
-            script.href = src;
-            script.rel = 'stylesheet';
-        } else {
-            script.src = src;
-        }
-        document.getElementsByTagName('head')[0].appendChild(script);
-    }
-    function addVideos(videos) {
-        let host = 'https://s0.pstatp.com/cdn/expire-1-M';
-        let unloadedResourceCount = 4;
-        let callback = (() => {
-            return () => {
-                if (!--unloadedResourceCount) {
-                    createDplayers(videos);
-                }
-            };
-        })(unloadedResourceCount, videos);
-        loadResources(
-            'link',
-            host + '/dplayer/1.25.0/DPlayer.min.css',
-            callback
-        );
-        loadResources(
-            'script',
-            host + '/dplayer/1.25.0/DPlayer.min.js',
-            callback
-        );
-        loadResources(
-            'script',
-            host + '/hls.js/0.12.4/hls.light.min.js',
-            callback
-        );
-        loadResources(
-            'script',
-            host + '/flv.js/1.5.0/flv.min.js',
-            callback
-        );
-    }
-    function createDplayers(videos) {
-        for (i = 0; i < videos.length; i++) {
-            console.log(videos[i]);
-            new DPlayer({
-                container: document.getElementById('video-a' + i),
-                screenshot: true,
-                video: {
-                    url: videos[i]
-                }
-            });
-        }
-    }
-    addVideos(['<!--FileDownUrl-->']);
+            <div class="main-item-list" id="videoFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                视频预览
+            </div>
+            <div class="main-item-list" id="videoFil-div" style="padding: 0;overflow: hidden;">
+                <div id="video-a0"></div>
+            </div>
 <!--IsvideoFileEnd-->
+
 <!--IspdfFileStart-->
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://unpkg.com/pdfjs-dist@2.4.456/build/pdf.worker.min.js';
-    var loadingTask = pdfjsLib.getDocument({
-        url: "<!--FileDownUrl-->",
-        cMapUrl: "https://unpkg.com/pdfjs-dist@2.4.456/cmaps/",
-        cMapPacked: true,
-        disableStream: true,
-        disableAutoFetch: true,
-        rangeChunkSize: 65535
-    });
-    /*loadingTask.onProgress = (e) => {
-        //console.log(e);
-        var p = document.getElementById('p');
-        if (p==null) {
-            p = document.createElement('div');
-            p.id = 'p';
-            p.setAttribute('onclick', "this.style.display = 'none';");
-            p.style = 'left: 10px; top: 30%; position: fixed;';
-            document.body.appendChild(p);
-        }
-        p.innerHTML = 'Loaded: ' + ((e.loaded/e.total)*100).toFixed(2) + '%<br>(' + size_format(e.loaded) + ' / ' + size_format(e.total) + ')';
-        p.style.display = '';
-        if (e.loaded==e.total) p.style.display = 'none';
-        
-    }*/
-    loadingTask.promise.then(function(pdf) {
-        var pagenum =  pdf.numPages;
-        var pdfContainer = document.getElementById('pdf-d');
-        pdfContainer.innerHTML = '';
-        var pagepos = 1;
-        var pdfnextpagebutton = document.createElement('button');
-        pdfnextpagebutton.id = 'pdfnextpagebutton';
-        pdfnextpagebutton.innerText = 'Load page ' + pagepos + '-' + (pagepos+4<pagenum?pagepos+4:pagenum) + ' (' + pagenum + ')';
-        pdfnextpagebutton.setAttribute('onclick', "this.style.display = 'none';");
-        pdfnextpagebutton.style.display = 'none';
-        pdfContainer.appendChild(pdfnextpagebutton);
-        var pdfWaitNextPage = setInterval(function(){
-            //console.log(document.documentElement.scrollTop + ", " + document.body.scrollHeight);
-            if (pdfnextpagebutton.style.display=='none') {
-                for (var i=pagepos;i<=(pagepos+4<pagenum?pagepos+4:pagenum);i++) {
-                    var canvasNew = document.createElement('canvas');
-                    canvasNew.id = 'pdf-c'+i;
-                    pdfContainer.appendChild(canvasNew);
-                    renderpage(pdf,i);
-                }
-                pagepos = i;
-                if (pagepos<pagenum) {
-                    console.log("next page: " + pagepos + " / " + pagenum);
-                    pdfnextpagebutton.innerText = 'Load page ' + pagepos + '-' + (pagepos+4<pagenum?pagepos+4:pagenum) + ' (' + pagenum + ')';
-                    pdfnextpagebutton.style.display ='';
-                    pdfContainer.appendChild(pdfnextpagebutton);
-                } else {
-                    console.log("end of pdf");
-                    clearInterval(pdfWaitNextPage);
-                }
-            }
-        }, 1000);
-    });
-    function renderpage(pdf,i) {
-        pdf.getPage(i).then(function(page) { 
-            var scale = 1.5;
-            var viewport = page.getViewport({ scale: scale, });
-            var canvas = document.getElementById('pdf-c'+i);
-            var context = canvas.getContext("2d");
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-            var renderContext = {
-                canvasContext: context,
-                viewport: viewport,
-            };
-            page.render(renderContext);
-        });
-    }
-    function size_format(num) {
-        if (num>1024) {
-            num=num/1024;
-        } else {
-            return num.toFixed(2) + ' B';
-        }
-        if (num>1024) {
-            num=num/1024;
-        } else {
-            return num.toFixed(2) + ' KB';
-        }
-        if (num>1024) {
-            num=num/1024;
-        } else {
-            return num.toFixed(2) + ' MB';
-        }
-        return num.toFixed(2) + ' GB';
-    }
+            <div class="main-item-list" id="pdfFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                文档预览
+            </div>
+            <div class="main-item-list" id="pdfFil-div" style="padding: 20px;overflow: hidden;">
+                <div id="pdf-d">少女折寿中 ... ...</div>
+            </div>
 <!--IspdfFileEnd-->
+
+<!--IsmusicFileStart-->
+            <div class="main-item-list" id="musFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                音频预览
+            </div>
+            <div class="main-item-list" id="musFil-div" style="padding: 15px;overflow: hidden;">
+                <audio src="<!--FileDownUrl-->" controls="controls" style="width: 100%"></audio>
+            </div>
+<!--IsmusicFileEnd-->
+
 <!--IstxtFileStart-->
-    var $textarea=document.getElementById('txt-a');
-    if ($textarea) {
-        $textarea.style.height = $textarea.scrollHeight + 'px';
-    }
+            <div class="main-item-list" id="txtFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                文本预览
+            </div>
+            <div class="main-item-list" id="txtFil-div" style="padding: 20px;overflow: hidden;">
+                <textarea id="txt-a" name="editfile" readonly><!--TxtContent--></textarea>
+            </div>
 <!--IstxtFileEnd-->
 <!--IsFileEnd-->
-<!--ListEnd-->
-<!--LoginStart-->
-        function login() {
-            document.getElementById('mask').style.display='';
-                //document.getElementById('mask').style.width=document.documentElement.scrollWidth+'px';
-            document.getElementById('mask').style.height=document.documentElement.scrollHeight<window.innerHeight?window.innerHeight:document.documentElement.scrollHeight+'px';
-            document.getElementById('login_div').style.display='';
-            document.getElementById('login_div').style.left=(document.body.clientWidth-document.getElementById('login_div').offsetWidth)/2 +'px';
-            document.getElementById('login_div').style.top=(window.innerHeight-document.getElementById('login_div').offsetHeight)/2+document.body.scrollTop +'px';
-            document.getElementById('login_input').focus();
-        }
-<!--LoginEnd-->
 
-// 功能性文件
-<!--HeadmdStart-->
-    var $head = document.getElementById('head');
-    if ($head) {
-        //document.getElementById('head-div').parentNode.insertBefore(document.getElementById('head-div'),document.getElementById('list-div'));
-        $head.innerHTML = marked(document.getElementById('head-md').innerText);
-    }
-<!--HeadmdEnd-->
+<!-- 文件下载 -->
+<!--IsFileStart-->
+            <div class="main-item-list" id="videoFil-div" style="padding: 15px 30px; font-size: larger; font-weight: bold;">
+                文件下载
+            </div>
+            <div class="main-item-list">
+                <div id="download">
+                        <textarea id="url" title="url" rows="5" cols="33" readonly><!--FileEncodeUrl--></textarea>
+                        
+                        <div id="download_tip">拥有链接的人员都可查看.</div>
+                        <div id="download_bu">
+                            <button id="download_1" onclick="navigator.clipboard.writeText(document.querySelector('#url').innerHTML)">复制链接</button>
+                            <button id="download_2" onclick="window.location.href = '<!--FileEncodeUrl-->'">点击下载</button>
+                        </div>
+                </div>
+            </div>
+<!--IsFileEnd-->
+
+<!-- 文件列表 -->
+<!--IsFolderStart-->
+            <div class="main-item-list">
+                <div class="main-items main-item-title">
+                    <div class="inner-container">
+                        <div class="main-items-icon">
+                            <i class="iconfont">&#xe746;</i>
+                        </div>
+                        <div class="main-items-displayName"><!--constStr@File--></div>
+                        <div class="main-items-dateModified"><!--constStr@EditTime--></div>
+                        <div class="main-items-size"><!--constStr@Size--></div>
+                    </div>
+                </div>
+<!--FolderListStart-->
+                <div class="main-items">
+                    <div class="main-items-icon">
+                        <img src="https://spoprod-a.akamaihd.net/files/fabric/assets/item-types-fluent/20/folder.svg" alt="folder icon">
+                    </div>
+                    <div class="main-items-fileName">
+                        <a href="<!--FileEncodeReplaceUrl-->/"><!--FileEncodeReplaceName--></a>
+                    </div>
+                    <div class="main-items-dateTime" ><!--lastModifiedDateTime--></div>
+                    <div class="main-items-fileSize" ><!--size--></div>
+                </div>
+<!--FolderListEnd-->
+<!--FileListStart-->
+                <div class="main-items">
+                    <div class="main-items-icon">
+                        <i class="iconfont">&#xe746;</i>
+                    </div>
+                    <div class="main-items-fileName">
+                        <a href="<!--FileEncodeReplaceUrl-->?preview" target="_blank"><!--FileEncodeReplaceName--></a>
+                    </div>
+                    <div class="main-items-dateTime" ><!--lastModifiedDateTime--></div>
+                    <div class="main-items-fileSize" ><!--size--></div>
+                </div>
+<!--FileListEnd-->
+            </div>
+<!--IsFolderEnd-->
 <!--ReadmemdStart-->
-    var $readme = document.getElementById('readme');
-    if ($readme) {
-        $readme.innerHTML = marked(document.getElementById('readme-md').innerText);
-    }
+            <div class="main-item-list" id="readme-div" style="padding: 20px;">
+                <div class="list-header-container">
+                    <div class="readme">
+                        <div class="markdown-body" id="readme">
+                            <textarea id="readme-md" style="display:none;"><!--ReadmemdContent--></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
 <!--ReadmemdEnd-->
-    </script>
+            <div style="text-align: center; margin-top: 100px;">
+                <div id="foot_info">
+                </div>
+                <script>
+                    let year = new Date().getFullYear()
+                    document.querySelector("#foot_info").innerHTML='Copyright © ' + year + ' | Powered by <a href="https://github.com/qkqpttgf/OneManager-php/">Onemanager</a> |   <a href="https://github.com/lswlc33/Onemanager_theme_new_onedrive/">Theme</a> by <a href="https://github.com/lswlc33/">雪中明月</a>'
+                </script>
+            </div>
+        </div>
+<!--ListEnd-->
 
-<!-- 文件上传相关 -->
+
+
+	<!-- 文件上传相关 -->
     <script>
         <!--UploadJsStart-->
     function size_format(num) {
@@ -1728,5 +1184,26 @@ function nextpage(num) {
 <!--AliyundriveUploadJsEnd-->
     </script>
 
-</body>
-</html>
+
+
+	</body>
+	
+
+	
+	
+	<!--customScript--></html><!--IconValuesStart--><!--
+
+{
+    "music":"musical-notes",
+    "video":"logo-youtube",
+    "img":"image",
+    "office":"newspaper",
+    "txt":"clipboard",
+    "zip":"file-tray-full",
+    "iso":"disc",
+    "apk":"logo-android",
+    "exe":"logo-windows",
+    "default":"document"
+}
+
+--><!--IconValuesEnd-->
